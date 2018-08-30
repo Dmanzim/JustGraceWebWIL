@@ -171,6 +171,7 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abuse.cs" />
     <Compile Include="Lessons.aspx.cs">
       <DependentUpon>Lessons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
