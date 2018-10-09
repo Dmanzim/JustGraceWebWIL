@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lessons.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Staff.aspx" />
     <Content Include="Educator.aspx" />
     <Content Include="PushNotification.aspx" />
@@ -171,6 +172,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SystemLogic\Abuse.cs" />
     <Compile Include="SystemLogic\Attendance.cs" />
     <Compile Include="SystemLogic\Educator.cs" />
