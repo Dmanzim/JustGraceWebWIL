@@ -171,12 +171,12 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abuse.cs" />
-    <Compile Include="Attendance.cs" />
-    <Compile Include="Educator.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Guardian.cs" />
-    <Compile Include="Lesson.cs" />
+    <Compile Include="SystemLogic\Abuse.cs" />
+    <Compile Include="SystemLogic\Attendance.cs" />
+    <Compile Include="SystemLogic\Educator.cs" />
+    <Compile Include="SystemLogic\Employee.cs" />
+    <Compile Include="SystemLogic\Guardian.cs" />
+    <Compile Include="SystemLogic\Lesson.cs" />
     <Compile Include="Lessons.aspx.cs">
       <DependentUpon>Lessons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,7 +184,7 @@
     <Compile Include="Lessons.aspx.designer.cs">
       <DependentUpon>Lessons.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PushNotification.cs" />
+    <Compile Include="SystemLogic\PushNotification.cs" />
     <Compile Include="Staff.aspx.cs">
       <DependentUpon>Staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,8 +254,8 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Staff.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="SystemLogic\Staff.cs" />
+    <Compile Include="SystemLogic\Student.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
