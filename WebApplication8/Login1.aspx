@@ -9,7 +9,7 @@
 </head>
 <body>
     <img src="justGrace.png" alt="logo">
-    <form id="form1" runat="server">
+    <form class="form" runat="server">
         <div>
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:wil3ConnectionString %>" SelectCommand="SELECT * FROM [tbl_AbuseReport]"></asp:SqlDataSource>
