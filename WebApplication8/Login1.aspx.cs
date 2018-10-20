@@ -18,5 +18,20 @@ namespace WebApplication8
         {
             new back.SQLConnect();
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
+
+        protected void btnRegistration_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
     }
 }

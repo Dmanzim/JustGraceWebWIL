@@ -76,7 +76,7 @@
     <Content Include="RecordLessonSchedule.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="StyleSheet1.css" />
-    <Content Include="Tester.aspx" />
+    <Content Include="Login1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -137,12 +137,12 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tester.aspx.cs">
-      <DependentUpon>Tester.aspx</DependentUpon>
+    <Compile Include="Login1.aspx.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tester.aspx.designer.cs">
-      <DependentUpon>Tester.aspx</DependentUpon>
+    <Compile Include="Login1.aspx.designer.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
