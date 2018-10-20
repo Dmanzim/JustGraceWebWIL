@@ -4,15 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="StyleSheet1.css" rel="stylesheet" type="text/css">
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css"/>
     <title></title>
 </head>
 <body>
-    <img src="justGrace.png" alt="logo">
+    <img src="justGrace.png" alt="logo"/>
     <div>
             <form class="form" runat="server">
-                <div>               
-                
+                <div>  
+                    <br />
+                    <asp:Label ID="lblErrorMessage" runat="server" Text="Label"></asp:Label>
                         <br />
                         Username:<br />
                         <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>

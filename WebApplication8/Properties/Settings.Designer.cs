@@ -26,8 +26,9 @@ namespace WebApplication8.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=justgrace.database.windows.net;Initial Catalog=wil3;Persist Security " +
-            "Info=True;User ID=WIL3;Password=Xisd2018")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:justgrace.database.windows.net,1433;Initial Catalog=wil3;Persist Secur" +
+            "ity Info=False;User ID=wil3;Password=Xisd2018;MultipleActiveResultSets=False;Enc" +
+            "rypt=True;TrustServerCertificate=False;Connection Timeout=30;")]
         public string connectionStr {
             get {
                 return ((string)(this["connectionStr"]));

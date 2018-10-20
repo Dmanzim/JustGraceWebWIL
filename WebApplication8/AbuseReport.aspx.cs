@@ -15,13 +15,7 @@ namespace WebApplication8
             sqlConn = new back.SQLConnect();
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            List<string> data = new List<string>();
-            
-
-            
-        }
+        
 
         protected void Button2_Click(object sender, EventArgs e)
         {
