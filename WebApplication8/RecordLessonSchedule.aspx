@@ -45,8 +45,8 @@
                 </asp:DropDownList>
             </p>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
-                <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
 
         </form>

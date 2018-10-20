@@ -40,8 +40,8 @@
                 </asp:DropDownList>
             </p>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" />
-                <asp:Button ID="Button2" runat="server" Text="Discard" OnClick="Button2_Click" />
+                <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
+                <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
         </form>
     </div>

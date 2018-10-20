@@ -13,19 +13,19 @@
         <form class="form" runat="server">
             Index:<br />
             <br>
-            <asp:Button ID="BtnAbuseReport" runat="server" Text="Abuse Report" OnClick="BtnAbuseReport_Click" />
+            <asp:Button ID="BtnAbuseReport" runat="server" Text="Abuse Report" OnClick="BtnAbuseReport_Click" BackColor="#99CCFF" />
             <br>
-            <asp:Button ID="btnGuardianSignUp" runat="server" Text="Guardian Sign Up" OnClick="btnGuardianSignUp_Click" />
+            <asp:Button ID="btnGuardianSignUp" runat="server" Text="Guardian Sign Up" OnClick="btnGuardianSignUp_Click" BackColor="#99CCFF" />
             <br>
-            <asp:Button ID="btnMissingStudents" runat="server" Text="Missing Students" OnClick="btnMissingStudents_Click" />
+            <asp:Button ID="btnMissingStudents" runat="server" Text="Missing Students" OnClick="btnMissingStudents_Click" BackColor="#99CCFF" />
             <br>
-            <asp:Button ID="btnPushNotification" runat="server" Text="Push Notification" OnClick="btnPushNotification_Click" />
+            <asp:Button ID="btnPushNotification" runat="server" Text="Push Notification" OnClick="btnPushNotification_Click" BackColor="#99CCFF" />
             <br>
-            <asp:Button ID="btnRecordEducator" runat="server" Text="Record Educator" OnClick="btnRecordEducator_Click" />
+            <asp:Button ID="btnRecordEducator" runat="server" Text="Record Educator" OnClick="btnRecordEducator_Click" BackColor="#99CCFF" />
             <br />
-            <asp:Button ID="btnRecordLessonSchedule" runat="server" Text="Record Lesson Schedule" OnClick="btnRecordLessonSchedule_Click" />
+            <asp:Button ID="btnRecordLessonSchedule" runat="server" Text="Record Lesson Schedule" OnClick="btnRecordLessonSchedule_Click" BackColor="#99CCFF" />
             <br />
-            <asp:Button ID="btnRegistration" runat="server" Text="Registration" OnClick="btnRegistration_Click" />
+            <asp:Button ID="btnRegistration" runat="server" Text="Registration" OnClick="btnRegistration_Click" BackColor="#99CCFF" />
             <br>
         </form>
     </div>
