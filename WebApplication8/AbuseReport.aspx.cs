@@ -20,7 +20,7 @@ namespace WebApplication8
             List<string> data = new List<string>();
             
 
-            //sqlConn.AddRecord("insert into tbl_AbuseReport(fld_Description, fld_ActionTaken, fld_Comment, fld_Date, fld_RecordedBy, fld_StudentID, fld_GuardianID) values", data);
+            
         }
 
         protected void Button2_Click(object sender, EventArgs e)
