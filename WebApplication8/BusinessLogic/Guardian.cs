@@ -92,7 +92,7 @@ namespace WebApplication8.BusinessLogic
             return result;
         }
 
-        public string getStudent(int guardianID)
+        public string getGuardian(int guardianID)
         {
             string result = "";
             string sql = " select *  from tbl_Guardian where fld_GuardianID = '" + guardianID + "'";
