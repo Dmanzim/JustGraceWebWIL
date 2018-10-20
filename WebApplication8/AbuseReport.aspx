@@ -13,6 +13,7 @@
     <div class='login-page'>
         <form class="form" runat="server">
             <div>
+                <asp:Label ID="lblErr" runat="server"></asp:Label>
             </div>
             <p>
                 Record Abuse Reports Below:
@@ -24,7 +25,7 @@
                 Student Name:
             </p>
             <%--<p>--%>
-                <asp:DropDownList ID="ddlStudentName" runat="server">
+                <asp:DropDownList ID="ddlStudentName" runat="server" OnSelectedIndexChanged="ddlStudentName_SelectedIndexChanged">
                 </asp:DropDownList>
             </p>
             <p>
