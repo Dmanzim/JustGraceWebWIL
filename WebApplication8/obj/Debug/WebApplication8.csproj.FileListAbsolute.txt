@@ -166,10 +166,7 @@ D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\roslyn\vbc.exe.config
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\roslyn\vbc.rsp
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe.config
-D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\back.dll
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\back.pdb
-D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\back.dll.config
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\Wil Project\JustGraceWebWIL\WebApplication8\bin\WebApplication8.dll.config

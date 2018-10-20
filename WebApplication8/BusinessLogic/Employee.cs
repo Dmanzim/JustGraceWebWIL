@@ -51,7 +51,7 @@ namespace WebApplication8.BusinessLogic
 
             connection.Open();
 
-            string sql = "select fld_Password from tbl_Employee where fld_email = '" + this.email + "' and fld_Password = '" + this.password + "'";
+            string sql = "select fld_EmployeeID from tbl_Employee where fld_email = '" + this.email + "' and fld_Password = '" + this.password + "'";
 
             try
             {
@@ -60,7 +60,7 @@ namespace WebApplication8.BusinessLogic
 
                 while (dataReader.Read())
                 {
-
+                    this.ID = int.Parse(dataReader.GetValue(0).ToString());
                     loggedIn = true;
 
                 }

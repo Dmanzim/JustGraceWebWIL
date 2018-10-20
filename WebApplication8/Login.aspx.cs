@@ -39,6 +39,7 @@ namespace WebApplication8
 
             if (loggedin)
             {
+                Session["UserID"] = currentEmployee.ID;
                 Response.Redirect("Index.aspx");
             }
             else
@@ -46,6 +47,8 @@ namespace WebApplication8
                 lblErrorMessage.Text = ("Username and password do not match, try again");
                 lblErrorMessage.Visible = true;
             }
+
+
 
         }
     }
