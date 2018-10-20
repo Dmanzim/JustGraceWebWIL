@@ -43,7 +43,7 @@ namespace WebApplication8.BusinessLogic
             try
             {
                 string sql = "Insert into tbl_AbuseReport (fld_Description,fld_ActionTaken,fld_Comment,fld_Date,fld_RecordedBy,fld_StudentID,fld_GuardianID) " +
-                    "values ('" + this.Description + "','" + this.ActionTaken + "','" + this.Comment + "','" + this.Date + "','" + this.RecordedBy + "','" + this.StudentId + "','" + this.GuardianId + "')";
+                    "values ('" + this.Description + "','" + this.ActionTaken + "','" + this.Comment + "','" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "'," + this.RecordedBy + "," + this.StudentId + "," + this.GuardianId + ")";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
