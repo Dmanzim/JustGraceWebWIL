@@ -24,29 +24,29 @@
                 Student Name:
             </p>
             <%--<p>--%>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlStudentName" runat="server">
                 </asp:DropDownList>
             </p>
             <p>
                 Description:
             </p>
             <p>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDescription" runat="server"></asp:TextBox>
             </p>
             <p>
                 Action Taken:
             </p>
             <p>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtActionTaken" runat="server"></asp:TextBox>
             </p>
             <p>
                 Comments:
             </p>
             <p>
-                <asp:TextBox ID="TextBox4" runat="server" Height="74px" Width="360px"></asp:TextBox>
+                <asp:TextBox ID="txtComment" runat="server" Height="74px" Width="360px"></asp:TextBox>
             </p>
-            <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
-            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+            <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
         </form>
     </div>
 </body>

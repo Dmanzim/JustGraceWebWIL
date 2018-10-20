@@ -91,7 +91,7 @@ namespace WebApplication8.BusinessLogic
             return result;
         }
 
-        public string getStudent(int PushNotificationID)
+        public string getPushNotification(int PushNotificationID)
         {
             string result = "";
             string sql = " select *  from tbl_PushNotification where fld_PushId = '" + PushNotificationID + "'";

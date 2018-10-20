@@ -80,7 +80,7 @@ namespace WebApplication8.BusinessLogic
             return result;
         }
 
-        public string getStudent(int lessonID)
+        public string getLesson(int lessonID)
         {
             string result = "";
             string sql = " select *  from tbl_Lesson where fld_LessonID = '" + lessonID + "'";

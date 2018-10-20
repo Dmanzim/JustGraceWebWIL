@@ -23,25 +23,26 @@
                 Lesson Date:
             </p>
             <p>
-                <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                <asp:Calendar ID="calLessonDate" runat="server"></asp:Calendar>
             </p>
             <p>
                 Lesson Missed:
             </p>
             <p>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlLesson" runat="server">
                 </asp:DropDownList>
             </p>
             <p>
                 Student Name:
             </p>
-            <asp:BulletedList ID="BulletedList1" runat="server">
-                <asp:ListItem>Student Name0</asp:ListItem>
-                <asp:ListItem>StudentName1</asp:ListItem>
-                <asp:ListItem>StudentName2</asp:ListItem>
-            </asp:BulletedList>
-            <asp:Button ID="Button1" runat="server" Text="Record" OnClick="Button1_Click" />
-            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+            <p>
+            <asp:DropDownList ID="ddlStudentName" runat="server">
+                </asp:DropDownList>
+                </p>
+            <br />
+            <asp:Button ID="btnRecord" runat="server" Text="Record" OnClick="Button1_Click" BackColor="#99CCFF" />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
+                
             <br />
         </form>
     </div>

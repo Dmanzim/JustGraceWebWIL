@@ -15,14 +15,14 @@
                 
                         <br />
                         Username:<br />
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                         <br />
                         Password:<br />
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
                         <br />
-                        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" BackColor="#99CCFF" />
                         <br />
-                        <asp:Button ID="btnRegistration" runat="server" OnClick="btnRegistration_Click" Text="Register" />
+                        <asp:Button ID="btnRegistration" runat="server" OnClick="btnRegistration_Click" Text="Register" BackColor="#99CCFF" />
                         <br />
                         <br />
                         <br />

@@ -20,41 +20,41 @@
                 First Name:
             </p>
             <p>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
             </p>
             <p>
                 Last Name:
             </p>
             <p>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
             </p>
             <p>
-                Constact Number:
+                Contact Number:
             </p>
             <p>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtContactNumber" runat="server"></asp:TextBox>
             </p>
             <p>
                 Email Address:
             </p>
             <p>
-                <asp:TextBox ID="TextBox4" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtEmailAddress" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
             </p>
             <p>
                 National ID:
             </p>
             <p>
-                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNationalId" runat="server"></asp:TextBox>
             </p>
             <p>
                 Password:
             </p>
             <p>
-                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             </p>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
-                <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
         </form>
     </div>
