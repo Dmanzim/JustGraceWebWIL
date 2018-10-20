@@ -9,24 +9,24 @@ namespace WebApplication8.BusinessLogic
 {
     public class Lesson
     {
-        private int ID, staffId;
+        private int ID, employeeId;
         private string description;
         private DateTime lessonDate;
         private double durationInHours;
 
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
-        public Lesson(int iD, int staffId, string description, DateTime lessonDate, double durationInHours)
+        public Lesson(int iD, int employeeId, string description, DateTime lessonDate, double durationInHours)
         {
             ID = iD;
-            this.staffId = staffId;
+            this.employeeId = employeeId;
             this.description = description;
             this.lessonDate = lessonDate;
             this.durationInHours = durationInHours;
         }
 
         public int ID1 { get => ID; set => ID = value; }
-        public int StaffId { get => staffId; set => staffId = value; }
+        public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string Description { get => description; set => description = value; }
         public DateTime LessonDate { get => lessonDate; set => lessonDate = value; }
         public double DurationInHours { get => durationInHours; set => durationInHours = value; }
@@ -37,8 +37,8 @@ namespace WebApplication8.BusinessLogic
             connection.Open();
             try
             {
-                string sql = "Insert into tbl_Lesson (FLD_DATETIME,FLD_DESCRIPTION,FLD_DURATIONHOURS,FLD_STAFFID) " +
-                    "values ('" + this.LessonDate + "','" + this.description + "','" + this.durationInHours + "','" + this.staffId + "')";
+                string sql = "Insert into tbl_Lesson (FLD_DATETIME,FLD_DESCRIPTION,FLD_DURATIONHOURS,FLD_EMPLOYEEID) " +
+                    "values ('" + this.LessonDate + "','" + this.description + "','" + this.durationInHours + "','" + this.employeeId + "')";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
@@ -64,7 +64,7 @@ namespace WebApplication8.BusinessLogic
                     "FLD_DATETIME = '" + this.LessonDate + "'," +
                     "FLD_DESCRIPTION = '" + this.description + "' ," +
                     "FLD_DURATIONHOURS = '" + this.durationInHours + "' ," +
-                    ",FLD_STAFFID = '" + this.staffId + "' where fld_LessonID = '" + lessonID + "'";
+                    ",FLD_EMPLOYEEID = '" + this.employeeId + "' where fld_LessonID = '" + lessonID + "'";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
                 result = "";
@@ -98,7 +98,7 @@ namespace WebApplication8.BusinessLogic
                     this.LessonDate = DateTime.Parse(dataReader.GetValue(1).ToString());
                     this.description = (dataReader.GetValue(2).ToString());
                     this.durationInHours = double.Parse(dataReader.GetValue(3).ToString());
-                    this.staffId = int.Parse(dataReader.GetValue(4).ToString());
+                    this.employeeId = int.Parse(dataReader.GetValue(4).ToString());
 
                 }
                 dataReader.Close();
