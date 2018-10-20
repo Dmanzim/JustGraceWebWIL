@@ -76,7 +76,7 @@
     <Content Include="RecordLessonSchedule.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="StyleSheet1.css" />
-    <Content Include="Login1.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +87,13 @@
     <Compile Include="AbuseReport.aspx.designer.cs">
       <DependentUpon>AbuseReport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BusinessLogic\AbuseReport.cs" />
+    <Compile Include="BusinessLogic\Attendance.cs" />
+    <Compile Include="BusinessLogic\Employee.cs" />
+    <Compile Include="BusinessLogic\Guardian.cs" />
+    <Compile Include="BusinessLogic\Lesson.cs" />
+    <Compile Include="BusinessLogic\PushNotification.cs" />
+    <Compile Include="BusinessLogic\Student.cs" />
     <Compile Include="GuardianSignUp.aspx.cs">
       <DependentUpon>GuardianSignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,6 +116,11 @@
       <DependentUpon>MissingStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="PushNotification.aspx.cs">
       <DependentUpon>PushNotification.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,16 +149,21 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login1.aspx.cs">
-      <DependentUpon>Login1.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login1.aspx.designer.cs">
-      <DependentUpon>Login1.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SQLConnect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -18,18 +18,16 @@ namespace back
         public SQLConnect()
         {
             connetionString = "Data Source=justgrace.database.windows.net;Initial Catalog=wil3;Persist Security Info=True;User ID=WIL3;Password=Xisd2018";
-            Connection = new SqlConnection(connetionString);
+            connection = new SqlConnection(connetionString);
         }
-
-        public SqlConnection Connection { get => connection; set => connection = value; }
 
         public string InsertRecordToDB(string query)
         {
             string result = "";
             try
             {
-                Connection.Open();
-                command = new SqlCommand(query, Connection);
+                connection.Open();
+                command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();                
                 command.Dispose();
                 result = "success";
@@ -41,7 +39,7 @@ namespace back
             }
             finally
             {
-                Connection.Close();
+                connection.Close();
             }
             return result;
         }
@@ -50,8 +48,8 @@ namespace back
             string result = "";
             try
             {
-                Connection.Open();
-                command = new SqlCommand(query, Connection);
+                connection.Open();
+                command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 command.Dispose();
                 result = "success";
@@ -63,7 +61,7 @@ namespace back
             }
             finally
             {
-                Connection.Close();
+                connection.Close();
             }
             return result;
         }

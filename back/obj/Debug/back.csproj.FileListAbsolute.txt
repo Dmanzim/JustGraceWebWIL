@@ -83,3 +83,10 @@ C:\Wil Project\JustGraceWebWIL\back\obj\Debug\back.csprojAssemblyReference.cache
 C:\Wil Project\JustGraceWebWIL\back\obj\Debug\back.csproj.CoreCompileInputs.cache
 C:\Wil Project\JustGraceWebWIL\back\obj\Debug\back.dll
 C:\Wil Project\JustGraceWebWIL\back\obj\Debug\back.pdb
+C:\JustGraceWILProject\JustGraceWIL\back\bin\Debug\back.dll.config
+C:\JustGraceWILProject\JustGraceWIL\back\bin\Debug\back.dll
+C:\JustGraceWILProject\JustGraceWIL\back\bin\Debug\back.pdb
+C:\JustGraceWILProject\JustGraceWIL\back\obj\Debug\back.csprojAssemblyReference.cache
+C:\JustGraceWILProject\JustGraceWIL\back\obj\Debug\back.csproj.CoreCompileInputs.cache
+C:\JustGraceWILProject\JustGraceWIL\back\obj\Debug\back.dll
+C:\JustGraceWILProject\JustGraceWIL\back\obj\Debug\back.pdb

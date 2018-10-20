@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace back.Properties {
+namespace WebApplication8.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -28,9 +28,9 @@ namespace back.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=justgrace.database.windows.net;Initial Catalog=wil3;Persist Security " +
             "Info=True;User ID=WIL3;Password=Xisd2018")]
-        public string connectionString {
+        public string connectionStr {
             get {
-                return ((string)(this["connectionString"]));
+                return ((string)(this["connectionStr"]));
             }
         }
     }
