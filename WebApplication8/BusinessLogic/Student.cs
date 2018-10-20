@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace WebApplication8.BusinessLogic
 {
@@ -71,8 +72,8 @@ namespace WebApplication8.BusinessLogic
                     "FLD_STUDLNAME = '" + this.lName + "' ," +
                     "FLD_PASSWORD = '" + this.password + "' ," +
                     "FLD_ACTIVE = '" + this.isActive + "' , " +
-                    "FLD_GUARDIANID = '" + this.guardianId + "'" +
-                    ",FLD_EMAIL = '" + this.email + "'";
+                    "FLD_GUARDIANID = '" + this.guardianId + "'," +
+                    "FLD_EMAIL = '" + this.email + "'where fld_studentID = '"+ studentID + "'";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
                 result = "";
@@ -122,6 +123,20 @@ namespace WebApplication8.BusinessLogic
                 connection.Close();
             }
                 return result;
+        }
+        public DataTable getDataTable()
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from tbl_Student";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
         }
     }
 }
