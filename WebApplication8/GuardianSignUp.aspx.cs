@@ -20,7 +20,6 @@ namespace WebApplication8
             List<string> data = new List<string>();
 
 
-            sqlConn.AddRecord("insert into tbl_Guardian(fld_FName,fld_LName,fld_Contact,fld_Active,fld_Email,fld_Address) values", data);
 
         }
 

@@ -20,7 +20,6 @@ namespace WebApplication8
             List<string> data = new List<string>();
 
 
-            sqlConn.AddRecord("insert into tbl_Employee(fld_FName,fld_LName,fld_ContactNo,fld_Email,fld_Password,fld_Active) values", data);
 
         }
 

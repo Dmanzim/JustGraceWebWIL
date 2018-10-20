@@ -20,7 +20,6 @@ namespace WebApplication8
             List<string> data = new List<string>();
 
 
-            sqlConn.AddRecord("insert into tbl_PushNotification(fld_Description,fld_Message,fld_Sent,fld_Date,fld_isStaff,fld_isStudent,fld_isGuardian,fld_StaffID) values", data);
 
         }
 
