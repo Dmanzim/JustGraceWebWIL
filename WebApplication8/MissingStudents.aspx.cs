@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,10 +10,20 @@ namespace WebApplication8
 {
     public partial class MissingStudents : System.Web.UI.Page
     {
-        back.SQLConnect sqlConn ;
         protected void Page_Load(object sender, EventArgs e)
         {
-            sqlConn = new back.SQLConnect();
+            
+            BusinessLogic.Student students = new BusinessLogic.Student();
+
+            DataTable dt = students.getStudentNameDataTable();
+
+            ddlStudentName.DataValueField = "FLD_STUDENTID";
+            ddlStudentName.DataTextField = "Name";
+
+            ddlStudentName.DataSource = dt;
+            ddlStudentName.DataBind();
+            
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)

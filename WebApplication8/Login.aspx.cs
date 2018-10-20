@@ -43,7 +43,8 @@ namespace WebApplication8
             }
             else
             {
-                Response.Write("Username and password do not match, try again");
+                lblErrorMessage.Text = ("Username and password do not match, try again");
+                lblErrorMessage.Visible = true;
             }
 
         }

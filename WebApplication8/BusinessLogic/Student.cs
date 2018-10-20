@@ -14,7 +14,10 @@ namespace WebApplication8.BusinessLogic
         private bool isActive;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
+        public Student()
+        {
 
+        }
 
         public Student(int iD, int guardianId, string fName, string lName, string password, bool isActive, string email)
         {
@@ -128,6 +131,20 @@ namespace WebApplication8.BusinessLogic
         {
             DataTable dt = new DataTable();
             string query = "select * from tbl_Student";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+        public DataTable getStudentNameDataTable()
+        {
+            DataTable dt = new DataTable();
+            string query = "select FLD_STUDENTID, CONCAT(FLD_STUDFNAME, ' ', FLD_STUDLNAME ) as [Name] from tbl_Student";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             connection.Open();
