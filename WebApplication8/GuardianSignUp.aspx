@@ -62,6 +62,9 @@
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
                 <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
+            <p>
+                <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>
+            </p>
 
         </form>
     </div>

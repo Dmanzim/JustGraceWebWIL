@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,15 +10,29 @@ namespace WebApplication8
 {
     public partial class RecordLessonSchedule : System.Web.UI.Page
     {
-        back.SQLConnect sqlConn ;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            sqlConn = new back.SQLConnect();
+            BusinessLogic.Employee tempEmployee = new BusinessLogic.Employee();
+
+            DataTable dt = tempEmployee.getEmployeeTeachersNameDataTable();
+
+            ddlTeacher.DataValueField = "fld_EmployeeID";
+            ddlTeacher.DataTextField = "Name";
+
+            ddlTeacher.DataSource = dt;
+            ddlTeacher.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            List<string> data = new List<string>();
+            int staffId = int.Parse(ddlTeacher.SelectedValue.ToString());
+            BusinessLogic.Lesson newlesson = new BusinessLogic.Lesson(0,staffId,txtDescription.Text,calLessonDate.SelectedDate,double.Parse(txtHours.Text));
+            string returnedStatus = newlesson.InsertToDatabase();
+            if(returnedStatus != "")
+            {
+                //Error
+            }
 
 
 
