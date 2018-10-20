@@ -36,7 +36,7 @@ namespace WebApplication8.BusinessLogic
             this.isActive = isActive;
         }
 
-        public int ID { get => ID; set => ID = value; }
+        public int ID { get => iD; set => iD = value; }
         public string FName { get => fName; set => fName = value; }
         public string LName { get => lName; set => lName = value; }
         public string ContactNumber { get => contactNumber; set => contactNumber = value; }
