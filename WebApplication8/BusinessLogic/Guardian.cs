@@ -10,28 +10,35 @@ namespace WebApplication8.BusinessLogic
     public class Guardian
     {
         private int ID;
-        private string fName, lName, contact, email, address;
+        private string fName, lName, contact, email, address, password;
         bool isActive;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
-        public Guardian(int iD, string fName, string lName, string contact, string email, string address, bool isActive)
+        public Guardian(int iD, string fName, string lName, string contact, string email, string address, bool isActive, string password)
         {
             ID = iD;
-            this.fName = fName;
-            this.lName = lName;
-            this.contact = contact;
-            this.email = email;
-            this.address = address;
+            this.FName1 = fName;
+            this.LName1 = lName;
+            this.Contact1 = contact;
+            this.Email1 = email;
+            this.Address1 = address;
             this.isActive = isActive;
+            this.password = password;
         }
 
         public int ID1 { get => ID; set => ID = value; }
-        public string FName { get => fName; set => fName = value; }
-        public string LName { get => lName; set => lName = value; }
-        public string Contact { get => contact; set => contact = value; }
-        public string Email { get => email; set => email = value; }
-        public string Address { get => address; set => address = value; }
+        public string FName { get => FName1; set => FName1 = value; }
+        public string LName { get => LName1; set => LName1 = value; }
+        public string Contact { get => Contact1; set => Contact1 = value; }
+        public string Email { get => Email1; set => Email1 = value; }
+        public string Address { get => Address1; set => Address1 = value; }
         public bool IsActive { get => isActive; set => isActive = value; }
+        public string FName1 { get => fName; set => fName = value; }
+        public string LName1 { get => lName; set => lName = value; }
+        public string Contact1 { get => contact; set => contact = value; }
+        public string Email1 { get => email; set => email = value; }
+        public string Address1 { get => address; set => address = value; }
+        public string Password { get => password; set => password = value; }
 
         public string InsertToDatabase()
         {
@@ -40,7 +47,7 @@ namespace WebApplication8.BusinessLogic
             try
             {
                 string sql = "Insert into tbl_Guardian (FLD_FNAME,FLD_LNAME,FLD_CONTACT,FLD_ACTIVE,FLD_EMAIL,FLD_ADDRESS,FLD_PASSWORD) " +
-                    "values ('" + this.fName + "','" + this.LName + "','" + this.contact + "','" + this.isActive + "','" + this.email + "','" + this.address + "','" + this.p + "')";
+                    "values ('" + this.FName1 + "','" + this.LName + "','" + this.Contact1 + "','" + this.isActive + "','" + this.Email1 + "','" + this.Address1 + "','" + this.password + "')";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
@@ -56,17 +63,20 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-        public string UpdateToDatabase(int lessonID)
+        public string UpdateToDatabase(int guardianID)
         {
             string result = "";
             connection.Open();
             try
             {
                 string sql = "update tbl_Guardian  set " +
-                    "FLD_DATETIME = '" + this.LessonDate + "'," +
-                    "FLD_DESCRIPTION = '" + this.description + "' ," +
-                    "FLD_DURATIONHOURS = '" + this.durationInHours + "' ," +
-                    ",FLD_STAFFID = '" + this.staffId + "' where fld_LessonID = '" + lessonID + "'";
+                    "FLD_FNAME = '" + this.FName + "'," +
+                    "FLD_LNAME = '" + this.LName + "' ," +
+                    "FLD_CONTACT = '" + this.contact + "'," +
+                    "FLD_ACTIVE = '" + this.IsActive + "' ," +
+                    "FLD_EMAIL = '" + this.email + "' ," +
+                    "FLD_ADDRESS = '" + this.address + "' ," +
+                    ",FLD_PASSWORD = '" + this.password + "' where fld_GuardianID = '" + guardianID + "'";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
                 result = "";
@@ -82,10 +92,10 @@ namespace WebApplication8.BusinessLogic
             return result;
         }
 
-        public string getStudent(int lessonID)
+        public string getStudent(int guardianID)
         {
             string result = "";
-            string sql = " select *  from tbl_Guardian where fld_LessonID = '" + lessonID + "'";
+            string sql = " select *  from tbl_Guardian where fld_GuardianID = '" + guardianID + "'";
             connection.Open();
 
             try
@@ -97,10 +107,13 @@ namespace WebApplication8.BusinessLogic
                 {
 
                     this.ID = int.Parse(dataReader.GetValue(0).ToString());
-                    this.LessonDate = DateTime.Parse(dataReader.GetValue(1).ToString());
-                    this.description = (dataReader.GetValue(2).ToString());
-                    this.durationInHours = double.Parse(dataReader.GetValue(3).ToString());
-                    this.staffId = int.Parse(dataReader.GetValue(4).ToString());
+                    this.FName = (dataReader.GetValue(1).ToString());
+                    this.LName = (dataReader.GetValue(2).ToString());
+                    this.contact = (dataReader.GetValue(3).ToString());
+                    this.IsActive = bool.Parse(dataReader.GetValue(4).ToString());
+                    this.email = (dataReader.GetValue(5).ToString());
+                    this.address = (dataReader.GetValue(6).ToString());
+                    this.password = (dataReader.GetValue(7).ToString());
 
                 }
                 dataReader.Close();
