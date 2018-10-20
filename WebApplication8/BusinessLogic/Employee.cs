@@ -44,6 +44,40 @@ namespace WebApplication8.BusinessLogic
         public string Password { get => password; set => password = value; }
         public bool IsActive { get => isActive; set => isActive = value; }
 
+
+        public bool loginEmployee()
+        {
+            bool loggedIn = false;
+
+            connection.Open();
+
+            string sql = "select fld_Password from tbl_Employee where fld_email = '" + this.email + "' and fld_Password = '" + this.password + "'";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+
+                    loggedIn = true;
+
+                }
+                dataReader.Close();
+                command.Dispose();
+            }
+            catch (Exception NoResuslts)
+            {
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return loggedIn;
+        }
+
         public string InsertToDatabase()
         {
             string result = "";
