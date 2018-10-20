@@ -23,25 +23,25 @@
                 Lesson Date:
             </p>
             <p>
-                <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                <asp:Calendar ID="calLessonDate" runat="server"></asp:Calendar>
             </p>
             <p>
                 Description:
             </p>
             <p>
-                <asp:TextBox ID="TextBox1" runat="server" Height="53px" Width="362px"></asp:TextBox>
+                <asp:TextBox ID="txtDescription" runat="server" Height="53px" Width="362px"></asp:TextBox>
             </p>
             <p>
                 Duration in hours:
             </p>
             <p>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtHours" runat="server"></asp:TextBox>
             </p>
             <p>
                 Teacher:
             </p>
             <p>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlTeacher" runat="server">
                 </asp:DropDownList>
             </p>
             <p>

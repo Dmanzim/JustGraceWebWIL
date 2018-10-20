@@ -13,31 +13,31 @@ namespace WebApplication8 {
     public partial class MissingStudents {
         
         /// <summary>
-        /// Calendar1 control.
+        /// calLessonDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.Calendar calLessonDate;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddlLesson control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLesson;
         
         /// <summary>
-        /// BulletedList1 control.
+        /// ddlStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.BulletedList BulletedList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlStudentName;
         
         /// <summary>
         /// btnRecord control.

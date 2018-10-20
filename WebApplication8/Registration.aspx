@@ -19,24 +19,24 @@
             <p>
                 <br />
                 Student First Name:<br />
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
                 <br />
                 Student Surname:
             </p>
             <p>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
             </p>
             <p>
                 Password:
             </p>
             <p>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             </p>
             <p>
                 Select Guardian:
             </p>
             <p>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlGuardian" runat="server">
                 </asp:DropDownList>
             </p>
             <p>
