@@ -76,7 +76,7 @@ namespace WebApplication8.BusinessLogic
                     "FLD_ACTIVE = '" + this.IsActive + "' ," +
                     "FLD_EMAIL = '" + this.email + "' ," +
                     "FLD_ADDRESS = '" + this.address + "' ," +
-                    ",FLD_PASSWORD = '" + this.password + "' where fld_GuardianID = '" + guardianID + "'";
+                    "FLD_PASSWORD = '" + this.password + "' where fld_GuardianID = '" + guardianID + "'";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
                 result = "";
