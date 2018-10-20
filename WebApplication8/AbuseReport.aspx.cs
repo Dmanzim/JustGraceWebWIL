@@ -35,7 +35,7 @@ namespace WebApplication8
             BusinessLogic.Student currentStudent = new BusinessLogic.Student();
             currentStudent.getStudent(int.Parse(ddlStudentName.SelectedValue.ToString()));
 
-            int guardianID = 1;
+            
 
             BusinessLogic.AbuseReport abused = new BusinessLogic.AbuseReport(0, int.Parse(Session["userID"].ToString()), int.Parse(ddlStudentName.SelectedValue.ToString()), currentStudent.GuardianId, txtDescription.Text.ToString(), txtActionTaken.Text.ToString(), txtComment.Text, DateTime.Now);
 
@@ -53,8 +53,6 @@ namespace WebApplication8
         protected void ddlStudentName_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-
-            abusedStudent.getStudent(int.Parse(ddlStudentName.DataValueField.ToString()));
         }
     }
 }
