@@ -14,14 +14,16 @@
             <div>
             </div>
             <p>
-                Enter Student Details Below
+                Enter Guardian Details Below
             </p>
             <p>
-                <br />
-                Student First Name:<br />
+                Guardian First Name:
+            </p>
+            <p>
                 <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-                <br />
-                Student Surname:
+            </p>
+            <p>
+                Guardian Surname:
             </p>
             <p>
                 <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
@@ -33,16 +35,37 @@
                 <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             </p>
             <p>
-                Select Guardian:
+                Email Address:
             </p>
             <p>
-                <asp:DropDownList ID="ddlGuardian" runat="server">
-                </asp:DropDownList>
+                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                Physical Address:
+            </p>
+            <p>
+                <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                Contact Number:
+            </p>
+            <p>
+                <asp:TextBox ID="txtContactNo" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                ID Number:
+            </p>
+            <p>
+                <asp:TextBox ID="txtIdNumber" runat="server"></asp:TextBox>
             </p>
             <p>
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
                 <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
+            <p>
+                <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>
+            </p>
+
         </form>
     </div>
 </body>

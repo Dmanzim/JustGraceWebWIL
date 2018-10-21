@@ -76,7 +76,8 @@
     <Content Include="PushNotification.aspx" />
     <Content Include="RecordEducator.aspx" />
     <Content Include="RecordLessonSchedule.aspx" />
-    <Content Include="StudentRegistration.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="Reporting.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
@@ -157,6 +158,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting.aspx.cs">
+      <DependentUpon>Reporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting.aspx.designer.cs">
+      <DependentUpon>Reporting.aspx</DependentUpon>
     </Compile>
     <Compile Include="SQLConnect.cs" />
   </ItemGroup>
