@@ -72,10 +72,10 @@
     <Content Include="button.jpg" />
     <Content Include="GuardianSignUp.aspx" />
     <Content Include="Index.aspx" />
-    <Content Include="MissingStudents.aspx" />
+    <Content Include="Attedance.aspx" />
     <Content Include="PushNotification.aspx" />
-    <Content Include="RecordEducator.aspx" />
-    <Content Include="RecordLessonSchedule.aspx" />
+    <Content Include="RegisterEmployee.aspx" />
+    <Content Include="RegisterLesson.aspx" />
     <Content Include="RptAttendance.aspx" />
     <Content Include="RptLessons.aspx" />
     <Content Include="StudentRegistration.aspx" />
@@ -112,12 +112,12 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MissingStudents.aspx.cs">
-      <DependentUpon>MissingStudents.aspx</DependentUpon>
+    <Compile Include="Attedance.aspx.cs">
+      <DependentUpon>Attedance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MissingStudents.aspx.designer.cs">
-      <DependentUpon>MissingStudents.aspx</DependentUpon>
+    <Compile Include="Attedance.aspx.designer.cs">
+      <DependentUpon>Attedance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -132,19 +132,19 @@
     <Compile Include="PushNotification.aspx.designer.cs">
       <DependentUpon>PushNotification.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RecordEducator.aspx.cs">
-      <DependentUpon>RecordEducator.aspx</DependentUpon>
+    <Compile Include="RegisterEmployee.aspx.cs">
+      <DependentUpon>RegisterEmployee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RecordEducator.aspx.designer.cs">
-      <DependentUpon>RecordEducator.aspx</DependentUpon>
+    <Compile Include="RegisterEmployee.aspx.designer.cs">
+      <DependentUpon>RegisterEmployee.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RecordLessonSchedule.aspx.cs">
-      <DependentUpon>RecordLessonSchedule.aspx</DependentUpon>
+    <Compile Include="RegisterLesson.aspx.cs">
+      <DependentUpon>RegisterLesson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RecordLessonSchedule.aspx.designer.cs">
-      <DependentUpon>RecordLessonSchedule.aspx</DependentUpon>
+    <Compile Include="RegisterLesson.aspx.designer.cs">
+      <DependentUpon>RegisterLesson.aspx</DependentUpon>
     </Compile>
     <Compile Include="RptAttendance.aspx.cs">
       <DependentUpon>RptAttendance.aspx</DependentUpon>

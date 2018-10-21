@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RecordLessonSchedule.aspx.cs" Inherits="WebApplication8.RecordLessonSchedule" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterEmployee.aspx.cs" Inherits="WebApplication8.RecordEducator" %>
 
 <!DOCTYPE html>
 <html>
@@ -74,6 +74,14 @@
 					
 					
 					
+					
+					
+					
+				
+    
+    
+    
+   
     <img src="justGrace.png" alt="logo">
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
@@ -82,42 +90,50 @@
             <div>
             </div>
             <p>
-                Record Lesson Schedule:
+                Record Educator:
             </p>
             <p>
-                Please note that all students will be able to see these:
+                First Name:
             </p>
             <p>
-                Lesson Date:
+                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
             </p>
             <p>
-                <asp:Calendar ID="calLessonDate" runat="server"></asp:Calendar>
+                Last Name:
             </p>
             <p>
-                Description:
+                <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
             </p>
             <p>
-                <asp:TextBox ID="txtDescription" runat="server" Height="53px" Width="362px"></asp:TextBox>
+                Contact Number:
             </p>
             <p>
-                Duration in hours:
+                <asp:TextBox ID="txtContactNumber" runat="server"></asp:TextBox>
             </p>
             <p>
-                <asp:TextBox ID="txtHours" runat="server"></asp:TextBox>
+                Email Address:
             </p>
             <p>
-                Teacher:
+                <asp:TextBox ID="txtEmailAddress" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
             </p>
             <p>
-                <asp:DropDownList ID="ddlTeacher" runat="server">
-                </asp:DropDownList>
+                National ID:
+            </p>
+            <p>
+                <asp:TextBox ID="txtNationalId" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                Password:
+            </p>
+            <p>
+                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             </p>
             <p>
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
-
         </form>
+					
 					
 					
 					
@@ -171,4 +187,3 @@ function myDropFunc() {
 
 </body>
 </html>
-
