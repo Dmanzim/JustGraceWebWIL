@@ -123,20 +123,15 @@
                 Contact Number:
             </p>
             <p>
-                <asp:TextBox ID="txtContactNo" runat="server"></asp:TextBox>
-                <asp:RegularExpressionValidator ID ="rcldAge" runat ="server" Display="Dynamic"
-                    ControlToValidate="txtContactNo" ErrorMessage ="Must only Enter numerical values"
-                    ValidateExpression="^[0-9]+$"></asp:RegularExpressionValidator>
+                <asp:TextBox ID="txtContactNo" runat="server" TextMode="Number" ></asp:TextBox>
             </p>
-            <p>
-                ID Number:
-            </p>
-            <p>
-                <asp:TextBox ID="txtIdNumber" runat="server"></asp:TextBox>
-            </p>
+            <br />
+            <br />
             <p>
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" />
+                <br />
+                <br />
+                <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" Width="80px" />
             </p>
             <p>
                 <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>

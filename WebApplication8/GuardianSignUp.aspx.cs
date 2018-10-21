@@ -16,7 +16,6 @@ namespace WebApplication8
         string Email;
         string Address;
         string ContactNo;
-        int IdNumber;
 
 
 
@@ -35,6 +34,7 @@ namespace WebApplication8
 
 
         }
+        
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -45,14 +45,24 @@ namespace WebApplication8
             Email = txtEmail.Text;
             Address = txtAddress.Text;
             ContactNo = txtContactNo.Text;
-            IdNumber = int.Parse(txtIdNumber.Text.ToString());
 
             
-            Guardian Guard = new Guardian(IdNumber, FirstName, Surname, ContactNo, Email, Address, true, Password);
+            Guardian Guard = new Guardian(0, FirstName, Surname, ContactNo, Email, Address, true, Password);
             if(!Guard.InsertToDatabase().Equals(""))
             {
                  
                 lblRegisterSuccess.Text= "Error";
+                MessageBox.Show(this.Page, "Failed to save Guardian to Database.");
+            }
+            else
+            {
+                txtAddress.Text = "";
+                txtContactNo.Text = "";
+                txtEmail.Text = "";
+                txtFirstName.Text = "";
+                txtPassword.Text = "";
+                txtSurname.Text = "";
+                MessageBox.Show(this.Page,"Guardian Saved to Database.");
             }
                 
                 
