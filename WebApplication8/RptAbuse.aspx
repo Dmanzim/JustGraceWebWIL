@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RptAttendance.aspx.cs" Inherits="WebApplication8.RptAttendance" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RptAbuse.aspx.cs" Inherits="WebApplication8.RptAbuse" %>
 
 <!DOCTYPE html>
 <html>
@@ -72,7 +72,7 @@
 					
 					
 					
-				 <div class = 'auto-style1'>
+				<div class = 'auto-style1'>
         <form class="form1"  runat="server">
             <div>
     <img src="justGrace.png" alt="logo" class="auto-style6">
@@ -83,7 +83,7 @@
                 <asp:Button ID="btnDateFilter" runat="server" Text="Enable/Disable Date Filter" OnClick="btnDateFilter_Click" Width="256px" />
                 <br />
                 <br />
-                <asp:Label ID="Label1" runat="server" Text="Student:"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Student :"></asp:Label>
                 <br />
                 <asp:DropDownList ID="ddlStudent" runat="server" Width="187px"></asp:DropDownList>
                 <br />
@@ -108,11 +108,9 @@
             </div>
             <br />
             <br />
-            <asp:GridView ID="gvAttendance" runat="server" Height="331px" Width="915px" CssClass="auto-style7"></asp:GridView>
+            <asp:GridView ID="gvAbuse" runat="server" Height="331px" Width="915px" CssClass="auto-style7"></asp:GridView>
         </form>
     </div>
-    
-
     	
 					
     
@@ -172,3 +170,4 @@ function myDropFunc() {
 
 </body>
 </html>
+
