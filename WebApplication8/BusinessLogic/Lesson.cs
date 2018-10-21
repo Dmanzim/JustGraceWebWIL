@@ -29,9 +29,7 @@ namespace WebApplication8.BusinessLogic
             this.durationInHours = durationInHours;
         }
 
-        public Lesson()
-        {
-        }
+       
 
         public int ID1 { get => ID; set => ID = value; }
         public int EmployeeId { get => employeeId; set => employeeId = value; }

@@ -113,7 +113,6 @@ C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.cs
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.dll
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.pdb
-D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CoreCompileInputs.cache
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.dll
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.pdb
