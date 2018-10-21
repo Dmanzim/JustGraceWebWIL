@@ -71,7 +71,7 @@
     <Content Include="back.jpg" />
     <Content Include="button.jpg" />
     <Content Include="GuardianSignUp.aspx" />
-    <Content Include="Attedance.aspx" />
+    <Content Include="Attendance.aspx" />
     <Content Include="PushNotification.aspx" />
     <Content Include="RegisterLesson.aspx" />
     <Content Include="RegisterEmployee.aspx" />
@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="BusinessLogic\AbuseReport.cs" />
     <Compile Include="BusinessLogic\Attendance.cs" />
+    <Compile Include="BusinessLogic\MessageBox .cs" />
     <Compile Include="BusinessLogic\Employee.cs" />
     <Compile Include="BusinessLogic\Guardian.cs" />
     <Compile Include="BusinessLogic\Lesson.cs" />
@@ -105,12 +106,12 @@
     <Compile Include="GuardianSignUp.aspx.designer.cs">
       <DependentUpon>GuardianSignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Attedance.aspx.cs">
-      <DependentUpon>Attedance.aspx</DependentUpon>
+    <Compile Include="Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Attedance.aspx.designer.cs">
-      <DependentUpon>Attedance.aspx</DependentUpon>
+    <Compile Include="Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

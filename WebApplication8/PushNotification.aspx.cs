@@ -13,12 +13,12 @@ namespace WebApplication8
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserID"] == null)
-            {
+            //if (Session["UserID"] == null)
+            //{
 
-                Response.Redirect("Login.aspx");
+            //    Response.Redirect("Login.aspx");
 
-            }
+            //}
         }
 
         protected void Button1_Click(object sender, EventArgs e)
