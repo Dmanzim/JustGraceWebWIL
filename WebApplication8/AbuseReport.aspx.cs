@@ -46,10 +46,7 @@ namespace WebApplication8
 
             BusinessLogic.AbuseReport abused = new BusinessLogic.AbuseReport(0, int.Parse(Session["userID"].ToString()), int.Parse(ddlStudentName.SelectedValue.ToString()), currentStudent.GuardianId, txtDescription.Text.ToString(), txtActionTaken.Text.ToString(), txtComment.Text, DateTime.Now);
 
-            abused.InsertToDatabase();
-
             lblErr.Text = abused.InsertToDatabase();
-            //lblErr.Text = DateTime.Now.ToString();
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

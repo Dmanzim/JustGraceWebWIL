@@ -117,7 +117,7 @@
                 Comments:
             </p>
             <p>
-                <asp:TextBox ID="txtComment" runat="server" Height="74px" Width="217px"></asp:TextBox>
+                <asp:TextBox ID="txtComment" runat="server" Height="74px" Width="800x"></asp:TextBox>
             </p>
             <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" BackColor="#99CCFF" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" BackColor="#99CCFF" />
