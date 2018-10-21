@@ -28,8 +28,7 @@ namespace WebApplication8
 
                 ddlStudent.DataSource = dt;
                 ddlStudent.DataBind();
-            }
-            
+            }            
 
         }
 
@@ -38,19 +37,19 @@ namespace WebApplication8
             String whereStatement = "";
             BusinessLogic.Attendance newAttendance = new BusinessLogic.Attendance();
 
-            if (ddlStudent.Enabled)
+            if (ddlStudent.Visible)
             {
                 whereStatement = whereStatement + "Where tbl_Student.FLD_STUDENTID = " + int.Parse(ddlStudent.SelectedValue.ToString()) + "";
             }
             if (CalDateTo.Visible)
             {
-                if (ddlStudent.Enabled)
+                if (ddlStudent.Visible)
                 {
-                    whereStatement = whereStatement + " and FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
+                    whereStatement = whereStatement + " and tbl_attendance.FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and tbl_attendance.FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
                 }
                 else
                 {
-                    whereStatement = " where FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
+                    whereStatement = " where tbl_attendance.FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and tbl_attendance.FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
                 }
             }
 

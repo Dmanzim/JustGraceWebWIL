@@ -16,6 +16,10 @@ namespace WebApplication8.BusinessLogic
 
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
+        public Lesson()
+        {
+
+        }
         public Lesson(int iD, int employeeId, string description, DateTime lessonDate, double durationInHours)
         {
             ID = iD;
@@ -129,6 +133,56 @@ namespace WebApplication8.BusinessLogic
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+        public DataTable getReportDataTable(String whereStatement)
+        {
+            string query = "";
+            DataTable dt = new DataTable();
+            if (whereStatement == "")
+            {
+                query = "select tbl_Lesson.FLD_DATE as [Date], " +
+                    "tbl_Lesson.FLD_DESCRIPTION as [Description]," +
+                    "tbl_Lesson.FLD_DURATIONHOURS as [Duration In Hours], " +
+                    "CONCAT(tbl_employee.FLD_FNAME, ' ',tbl_employee.FLD_LNAME ) as [Employee Name]  " +
+                    "from tbl_Lesson " +
+                    "join tbl_employee on tbl_Lesson.FLD_EMPLOYEEID = tbl_employee.FLD_EMPLOYEEID";
+            }
+            else
+            {
+                query = "select tbl_Lesson.FLD_DATE as [Date], " +
+                                    "tbl_Lesson.FLD_DESCRIPTION as [Description]," +
+                                    "tbl_Lesson.FLD_DURATIONHOURS as [Duration In Hours], " +
+                                    "CONCAT(tbl_employee.FLD_FNAME, ' ',tbl_employee.FLD_LNAME ) as [Employee Name]  " +
+                                    "from tbl_Lesson " +
+                                    "join tbl_employee on tbl_Lesson.FLD_EMPLOYEEID = tbl_employee.FLD_EMPLOYEEID " +
+                                    " " + whereStatement + " ";
+            }
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            try
+            {
+                da.Fill(dt);
+            }
+            catch
+            {
+                query = "select tbl_Lesson.FLD_DATE as [Date], " +
+                                    "tbl_Lesson.FLD_DESCRIPTION as [Description]," +
+                                    "tbl_Lesson.FLD_DURATIONHOURS as [Duration In Hours], " +
+                                    "CONCAT(tbl_employee.FLD_FNAME, ' ',tbl_employee.FLD_LNAME ) as [Employee Name]  " +
+                                    "from tbl_Lesson " +
+                                    "join tbl_employee on tbl_Lesson.FLD_EMPLOYEEID = tbl_employee.FLD_EMPLOYEEID";
+
+                cmd = new SqlCommand(query, connection);
+                da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
             connection.Close();
             da.Dispose();
 
