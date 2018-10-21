@@ -220,8 +220,8 @@ C:\Wil Project\JustGraceWebWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe
 C:\Wil Project\JustGraceWebWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe.config
 C:\Wil Project\JustGraceWebWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Wil Project\JustGraceWebWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CoreCompileInputs.cache
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.dll
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.pdb
-C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache
