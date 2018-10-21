@@ -11,7 +11,6 @@ namespace WebApplication8
     public partial class Tester : System.Web.UI.Page
     {
 
-        private string username,password;
         protected void Page_Load(object sender, EventArgs e)
         {
 
