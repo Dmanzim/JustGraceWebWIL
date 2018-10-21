@@ -39,7 +39,7 @@ namespace WebApplication8
             if (loggedin)
             {
                 Session["UserID"] = currentEmployee.ID;
-                Response.Redirect("Index.aspx");
+                Response.Redirect("RegisterLesson.aspx");
             }
             else
             {
