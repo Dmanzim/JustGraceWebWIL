@@ -71,7 +71,6 @@
     <Content Include="back.jpg" />
     <Content Include="button.jpg" />
     <Content Include="GuardianSignUp.aspx" />
-    <Content Include="Index.aspx" />
     <Content Include="Attedance.aspx" />
     <Content Include="PushNotification.aspx" />
     <Content Include="RegisterEmployee.aspx" />
@@ -104,13 +103,6 @@
     </Compile>
     <Compile Include="GuardianSignUp.aspx.designer.cs">
       <DependentUpon>GuardianSignUp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attedance.aspx.cs">
       <DependentUpon>Attedance.aspx</DependentUpon>

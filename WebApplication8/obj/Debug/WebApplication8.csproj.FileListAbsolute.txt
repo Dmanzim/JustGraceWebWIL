@@ -108,7 +108,6 @@ C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe.config
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CoreCompileInputs.cache
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.dll
