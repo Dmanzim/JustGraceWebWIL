@@ -22,29 +22,26 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<%= Page.ResolveUrl("~//AbuseReport.aspx") %>">Abuse Report</a>
-                </li>
-                <li>
-                    <a href="<%= Page.ResolveUrl("~//GuardianSignUp.aspx") %>">Guardian Sign Up</a>
-                </li>
-                <li>
                     <a href="<%= Page.ResolveUrl("~//Login.aspx") %>">Login</a>
                 </li>
                 <li>
-                    <a href="<%= Page.ResolveUrl("~//MissingStudents.aspx") %>">Missing Student</a>
+                    <a href="<%= Page.ResolveUrl("~//AbuseReport.aspx") %>">Record Abuse Report</a>
                 </li>
                 <li>
-                   <a href="<%= Page.ResolveUrl("~//PushNotification.aspx") %>" >Push Notifications</a>
+                    <a href="<%= Page.ResolveUrl("~//GuardianSignUp.aspx") %>">Guardian Sign Up</a>
+                </li>                
+                <li>
+                    <a href="<%= Page.ResolveUrl("~//Attendance.aspx") %>">Student Attendance</a>
                 </li>
                 <li>
-                   <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Register Employee</a>
+                   <a href="<%= Page.ResolveUrl("~//PushNotification.aspx") %>" >Create Push Notification</a>
                 </li>
                 <li>
-                   <a href="<%= Page.ResolveUrl("~//Registration.aspx") %>">Registration</a>
+                   <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
                 </li>
                 <li>
-                   <a href="<%= Page.ResolveUrl("~//Reporting.aspx") %>">Reporting</a>
-                </li>
+                   <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
+                </li>                
                 <li>
                     <div class="dropdown">
   <span>Reports</span>
