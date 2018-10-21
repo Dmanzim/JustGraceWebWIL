@@ -28,8 +28,7 @@ namespace WebApplication8
 
                 ddlStudent.DataSource = dt;
                 ddlStudent.DataBind();
-            }
-            
+            }            
 
         }
 
@@ -46,11 +45,11 @@ namespace WebApplication8
             {
                 if (ddlStudent.Visible)
                 {
-                    whereStatement = whereStatement + " and FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
+                    whereStatement = whereStatement + " and tbl_attendance.FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and tbl_attendance.FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
                 }
                 else
                 {
-                    whereStatement = " where FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
+                    whereStatement = " where tbl_attendance.FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and tbl_attendance.FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
                 }
             }
 

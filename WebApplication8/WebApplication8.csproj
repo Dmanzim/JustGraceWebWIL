@@ -77,6 +77,7 @@
     <Content Include="RecordEducator.aspx" />
     <Content Include="RecordLessonSchedule.aspx" />
     <Content Include="RptAttendance.aspx" />
+    <Content Include="RptLessons.aspx" />
     <Content Include="StudentRegistration.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Login.aspx" />
@@ -151,6 +152,13 @@
     </Compile>
     <Compile Include="RptAttendance.aspx.designer.cs">
       <DependentUpon>RptAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RptLessons.aspx.cs">
+      <DependentUpon>RptLessons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RptLessons.aspx.designer.cs">
+      <DependentUpon>RptLessons.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentRegistration.aspx.cs">
       <DependentUpon>StudentRegistration.aspx</DependentUpon>
