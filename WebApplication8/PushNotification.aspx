@@ -6,10 +6,17 @@
 <head runat="server">
     <link href="StyleSheet1.css" rel="stylesheet" type="text/css">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 478px;
+            padding: 8% 0 0;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
     <img src="justGrace.png" alt="logo">
-    <div class='login-page'>
+    <div class='auto-style1'>
         <form class="form" runat="server">
             <div>
                 Push Notifications:<br />
@@ -32,8 +39,9 @@
                 <asp:CheckBox ID="chkSendToEmployee" runat="server" Text="Send To Employee" />
                 <br />
                 <br />
-                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
+                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" Width="252px" />
+                <br />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" Width="251px" />
                 <br />
             </div>
         </form>

@@ -25,6 +25,10 @@ namespace WebApplication8.BusinessLogic
             this.didAttend = didAttend;
         }
 
+        public Attendance()
+        {
+        }
+
         public int ID { get => iD; set => iD = value; }
         public int LessonId { get => lessonId; set => lessonId = value; }
         public int StudentId { get => studentId; set => studentId = value; }
@@ -128,6 +132,58 @@ namespace WebApplication8.BusinessLogic
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+        public DataTable getAttendanceRptDataTable(String whereStatement)
+        {
+            string query = "";
+            DataTable dt = new DataTable();
+            if (whereStatement == "")
+            {
+                query = "select tbl_attendance.FLD_DATERECORDED as [Date], " +
+                    "CONCAT(tbl_Student.FLD_STUDFNAME, ' ',tbl_Student.FLD_STUDLNAME ) as [Student Name]," +
+                    "CONCAT(tbl_Guardian.FLD_FNAME, ' ', tbl_Guardian.FLD_LNAME) as [Guardian Name], " +
+                    "tbl_Guardian.FLD_CONTACT as [Contact Number] ," +
+                    "tbl_attendance.FLD_Didattend as [Attended Session] from tbl_attendance " +
+                    "join tbl_Student on tbl_attendance.FLD_STUDENTID = tbl_Student.FLD_STUDENTID " +
+                    "join tbl_Guardian on tbl_attendance.FLD_GUARDIANID = tbl_Guardian.FLD_GUARDIANID";
+            }
+            else
+            {
+                query = "select tbl_attendance.FLD_DATERECORDED as [Date], " +
+                    "CONCAT(tbl_Student.FLD_STUDFNAME, ' ',tbl_Student.FLD_STUDLNAME ) as [Student Name]," +
+                    "CONCAT(tbl_Guardian.FLD_FNAME, ' ', tbl_Guardian.FLD_LNAME) as [Guardian Name], " +
+                    "tbl_Guardian.FLD_CONTACT as [Contact Number] ," +
+                    "tbl_attendance.FLD_Didattend as [Attended Session] from tbl_attendance " +
+                    "join tbl_Student on tbl_attendance.FLD_STUDENTID = tbl_Student.FLD_STUDENTID " +
+                    "join tbl_Guardian on tbl_attendance.FLD_GUARDIANID = tbl_Guardian.FLD_GUARDIANID " +
+                    ""+whereStatement+"";
+            }
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch
+            {
+                query = "select tbl_attendance.FLD_DATERECORDED as [Date], " +
+                    "CONCAT(tbl_Student.FLD_STUDFNAME, ' ',tbl_Student.FLD_STUDLNAME ) as [Student Name]," +
+                    "CONCAT(tbl_Guardian.FLD_FNAME, ' ', tbl_Guardian.FLD_LNAME) as [Guardian Name], " +
+                    "tbl_Guardian.FLD_CONTACT as [Contact Number]," +
+                    "tbl_attendance.FLD_Didattend as [Attended Session] from tbl_attendance " +
+                    "join tbl_Student on tbl_attendance.FLD_STUDENTID = tbl_Student.FLD_STUDENTID " +
+                    "join tbl_Guardian on tbl_attendance.FLD_GUARDIANID = tbl_Guardian.FLD_GUARDIANID";
+
+                cmd = new SqlCommand(query, connection);
+                da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
             connection.Close();
             da.Dispose();
 
