@@ -87,6 +87,7 @@
                     </div>
         <form class="form" runat="server">
             <div>
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
             </div>
             <p>
                 Record Student Attendance:

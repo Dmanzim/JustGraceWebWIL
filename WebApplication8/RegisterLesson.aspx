@@ -91,7 +91,7 @@
                 Lesson Date:
             </p>
             <p>
-                <asp:Calendar ID="calLessonDate" runat="server"></asp:Calendar>
+                <asp:Calendar ID="calLessonDate" runat="server" ></asp:Calendar>
             </p>
             <p>
                 Description:

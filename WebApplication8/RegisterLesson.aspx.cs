@@ -35,7 +35,7 @@ namespace WebApplication8
         protected void Button1_Click(object sender, EventArgs e)
         {
             int staffId = int.Parse(ddlTeacher.SelectedValue.ToString());
-            BusinessLogic.Lesson newlesson = new BusinessLogic.Lesson(0,staffId,txtDescription.Text,calLessonDate.SelectedDate.ToString("yyyy/MM/dd"), double.Parse(txtHours.Text));
+            BusinessLogic.Lesson newlesson = new BusinessLogic.Lesson(0,staffId,txtDescription.Text,calLessonDate.SelectedDate, double.Parse(txtHours.Text));
             string returnedStatus = newlesson.InsertToDatabase();
             if(returnedStatus != "")
             {
