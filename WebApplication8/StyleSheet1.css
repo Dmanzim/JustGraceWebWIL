@@ -271,4 +271,37 @@
         background: #fff;
     }
 
+	.auto-style1 {
+		width: 837px;
+		padding: 2% 0 0;
+		margin: 0px auto auto auto;
+	}
+
+	.auto-style2 {
+		height: 60px;
+		width: 696px;
+	}
+
+	.auto-style3 {
+		position: relative;
+		left: 602px;
+		top: -347px;
+		width: 312px;
+	}
+
+	.auto-style5 {
+		position: relative;
+		left: 277px;
+		top: -147px;
+		width: 312px;
+	}
+
+	.auto-style6 {
+		width: 223px;
+		height: 111px;
+	}
+
+	.auto-style7 {
+		margin-right: 0px;
+	}
 }

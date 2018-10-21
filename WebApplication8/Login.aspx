@@ -37,7 +37,7 @@
                    <a href="<%= Page.ResolveUrl("~//PushNotification.aspx") %>" >Push Notifications</a>
                 </li>
                 <li>
-                   <a href="<%= Page.ResolveUrl("~//RecordEducator.aspx") %>">Record Educator</a>
+                   <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Record Educator</a>
                 </li>
                 <li>
                    <a href="<%= Page.ResolveUrl("~//Registration.aspx") %>">Registration</a>
@@ -46,9 +46,9 @@
                     <div class="dropdown">
   <span>Reports</span>
   <div class="dropdown-content">
-    <p>Report1</p>
-      <p>Report2</p>
-      <p>Report3</p>
+    <p><a href="<%= Page.ResolveUrl("~//RptAttendance.aspx") %>">Attendance</a</p>
+      <p><a href="<%= Page.ResolveUrl("~//RptAbuse.aspx") %>">Abuse</a</p>
+      <p><a href="<%= Page.ResolveUrl("~//RptLessons.aspx") %>">Lessons</a</p>
       
       
   </div>
