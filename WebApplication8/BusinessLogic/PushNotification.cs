@@ -45,7 +45,7 @@ namespace WebApplication8.BusinessLogic
             try
             {
                 string sql = "Insert into tbl_PushNotification (FLD_DESCRIPTION,FLD_MESSAGE,FLD_SENT,FLD_DATE,FLD_ISSTAFF,FLD_ISSTUDENT,FLD_ISGUARDIAN,FLD_EmployeeID) " +
-                    "values ('" + this.description + "','" + this.message + "','" + this.sent + "','" + this.date + "','" + this.isStaff + "','" + this.isForStudent + "', '" + this.isForGuardian + ", '" + this.employeeID + "'')";
+                    "values ('" + this.description + "','" + this.message + "','" + this.sent + "','" + this.date + "','" + this.isStaff + "','" + this.isForStudent + "', '" + this.isForGuardian + "', " + this.employeeID + ")";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();

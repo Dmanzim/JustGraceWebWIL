@@ -13,12 +13,12 @@ namespace WebApplication8
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["UserID"] == null)
-            //{
+            if (Session["UserID"] == null)
+            {
 
-            //    Response.Redirect("Login.aspx");
+                Response.Redirect("Login.aspx");
 
-            //}
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -34,12 +34,13 @@ namespace WebApplication8
 
             if(result != "")
             {
-                //Error
+                MessageBox.Show(this.Page, "Error :" + result);
             }
             else
             {
                 txtDescription.Text = "";
                 txtMessage.Text = "";
+                MessageBox.Show(this.Page, "Successfully saved notification");
             }
 
         }

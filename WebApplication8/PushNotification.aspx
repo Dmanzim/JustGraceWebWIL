@@ -88,7 +88,7 @@
                     </div>
         <form class="form" runat="server">
             <div>
-                Push Notifications:<br />
+                <h2>Push Notifications:</h2><br />
                 Please note that this information will be sent out to the andriod users:<br />
                 <br />
                 Date to Send:<br />
@@ -100,6 +100,7 @@
                 Message:<br />
                 <asp:TextBox ID="txtMessage" runat="server" Height="58px" Width="361px"></asp:TextBox>
                 <br />
+                <br />
                 Recipients:<br />
                 <asp:CheckBox ID="chkSendToStudent" runat="server" Text="Send To Student" />
                 <br />
@@ -109,6 +110,7 @@
                 <br />
                 <br />
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" Width="252px" />
+                <br />
                 <br />
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" Width="251px" />
                 <br />
