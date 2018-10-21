@@ -9,9 +9,19 @@ namespace WebApplication8
 {
     public partial class Registration : System.Web.UI.Page
     {
+
+
         back.SQLConnect sqlConn;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["UserID"] == null)
+            {
+
+                Response.Redirect("Login.aspx");
+
+            }
+
             sqlConn = new back.SQLConnect();
         }
 

@@ -13,6 +13,14 @@ namespace WebApplication8
         
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["UserID"] == null)
+            {
+
+                Response.Redirect("Login.aspx");
+
+            }
+
             BusinessLogic.Employee tempEmployee = new BusinessLogic.Employee();
 
             DataTable dt = tempEmployee.getEmployeeTeachersNameDataTable();
