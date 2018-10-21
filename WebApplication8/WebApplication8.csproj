@@ -76,7 +76,13 @@
     <Content Include="PushNotification.aspx" />
     <Content Include="RecordEducator.aspx" />
     <Content Include="RecordLessonSchedule.aspx" />
+<<<<<<< HEAD
     <Content Include="Registration.aspx" />
+=======
+    <Content Include="RptAttendance.aspx" />
+    <Content Include="RptLessons.aspx" />
+    <Content Include="StudentRegistration.aspx" />
+>>>>>>> 01.03.00
     <Content Include="StyleSheet1.css" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
@@ -143,6 +149,20 @@
     </Compile>
     <Compile Include="RecordLessonSchedule.aspx.designer.cs">
       <DependentUpon>RecordLessonSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RptAttendance.aspx.cs">
+      <DependentUpon>RptAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RptAttendance.aspx.designer.cs">
+      <DependentUpon>RptAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RptLessons.aspx.cs">
+      <DependentUpon>RptLessons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RptLessons.aspx.designer.cs">
+      <DependentUpon>RptLessons.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentRegistration.aspx.cs">
       <DependentUpon>StudentRegistration.aspx</DependentUpon>

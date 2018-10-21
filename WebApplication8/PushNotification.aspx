@@ -108,8 +108,9 @@
                 <asp:CheckBox ID="chkSendToEmployee" runat="server" Text="Send To Employee" />
                 <br />
                 <br />
-                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
+                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" Width="252px" />
+                <br />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" Width="251px" />
                 <br />
             </div>
         </form>
