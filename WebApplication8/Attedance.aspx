@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MissingStudents.aspx.cs" Inherits="WebApplication8.MissingStudents" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Attedance.aspx.cs" Inherits="WebApplication8.MissingStudents" %>
 
 <!DOCTYPE html>
 <html>
@@ -89,7 +89,7 @@
             <div>
             </div>
             <p>
-                Record Missing Students:
+                Record Student Attendance:
             </p>
             <p>
                 Please note a message will be sent to the guardian regarding their childs missed session.
@@ -98,7 +98,7 @@
                 Lesson Date:
             </p>
             <p>
-                <asp:Calendar ID="calLessonDate" runat="server"></asp:Calendar>
+                <asp:Calendar ID="calLessonDate" runat="server" OnSelectionChanged="calLessonDate_SelectionChanged"></asp:Calendar>
             </p>
             <p>
                 Lesson Missed:
@@ -113,9 +113,16 @@
             <p>
             <asp:DropDownList ID="ddlStudentName" runat="server">
                 </asp:DropDownList>
-                </p>
+            </p>
+            <p>
+                Attended:<br>
+                <asp:DropDownList ID="ddlAttended" runat="server" OnSelectedIndexChanged="ddlAttended_SelectedIndexChanged">
+                    <asp:ListItem Value="0">Did not attend</asp:ListItem>
+                    <asp:ListItem Value="1">Attended</asp:ListItem>
+                </asp:DropDownList>
+            </p>
             <br />
-            <asp:Button ID="btnRecord" runat="server" Text="Record" OnClick="Button1_Click" BackColor="#99CCFF" />
+            <asp:Button ID="btnRecord" runat="server" Text="Record" OnClick="btnRecord_Click" BackColor="#99CCFF" /><br>
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
                 
             <br />

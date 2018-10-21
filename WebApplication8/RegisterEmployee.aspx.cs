@@ -12,6 +12,13 @@ namespace WebApplication8
         back.SQLConnect sqlConn ;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserID"] == null)
+            {
+
+                Response.Redirect("Login.aspx");
+
+            }
+
             sqlConn = new back.SQLConnect();
         }
 

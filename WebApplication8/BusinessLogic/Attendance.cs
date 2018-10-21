@@ -11,11 +11,11 @@ namespace WebApplication8.BusinessLogic
     public class Attendance
     {
         private int iD, lessonId, studentId, guardianId;
-        private DateTime dateRecorded;
+        private string dateRecorded;
         bool didAttend;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
-        public Attendance(int ID, int lessonId, int studentId, int guardianId, DateTime dateRecorded, bool didAttend)
+        public Attendance(int ID, int lessonId, int studentId, int guardianId, string dateRecorded, bool didAttend)
         {
             this.iD = ID;
             this.lessonId = lessonId;
@@ -33,7 +33,7 @@ namespace WebApplication8.BusinessLogic
         public int LessonId { get => lessonId; set => lessonId = value; }
         public int StudentId { get => studentId; set => studentId = value; }
         public int GuardianId { get => guardianId; set => guardianId = value; }
-        public DateTime DateRecorded { get => dateRecorded; set => dateRecorded = value; }
+        public string DateRecorded { get => dateRecorded; set => dateRecorded = value; }
         public bool DidAttend { get => didAttend; set => didAttend = value; }
 
         public string InsertToDatabase()
@@ -42,8 +42,8 @@ namespace WebApplication8.BusinessLogic
             connection.Open();
             try
             {
-                string sql = "Insert into tbl_Attendance (fld_LessonID,fld_StudentID,fld_DateRecorded,fld_Guardian,fld_DidAttend) " +
-                    "values ('" + this.LessonId + "','" + this.StudentId + "','" + this.DateRecorded + "','" + this.GuardianId + "','" + this.DidAttend + "','" + "')";
+                string sql = "Insert into tbl_Attendance (fld_LessonID,fld_StudentID,fld_DateRecorded,fld_GuardianID,fld_DidAttend) " +
+                    "values ('" + this.LessonId + "','" + this.StudentId + "','" + this.DateRecorded + "','" + this.GuardianId + "','" + this.DidAttend + "')";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
@@ -103,7 +103,7 @@ namespace WebApplication8.BusinessLogic
                     this.ID = int.Parse(dataReader.GetValue(0).ToString());
                     this.LessonId = int.Parse(dataReader.GetValue(1).ToString());
                     this.StudentId = int.Parse(dataReader.GetValue(2).ToString());
-                    this.DateRecorded = DateTime.Parse(dataReader.GetValue(3).ToString());
+                    this.DateRecorded = (dataReader.GetValue(3).ToString());
                     this.GuardianId = int.Parse(dataReader.GetValue(4).ToString());
                     this.DidAttend = bool.Parse(dataReader.GetValue(5).ToString());
 

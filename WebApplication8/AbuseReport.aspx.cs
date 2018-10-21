@@ -14,7 +14,14 @@ namespace WebApplication8
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+            if (Session["UserID"] == null)
+            {
+
+                Response.Redirect("Login.aspx");
+
+            }
+
 
             BusinessLogic.Student students = new BusinessLogic.Student();
 

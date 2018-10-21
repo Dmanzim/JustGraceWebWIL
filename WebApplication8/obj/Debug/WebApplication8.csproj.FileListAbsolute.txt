@@ -108,12 +108,10 @@ C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\roslyn\VBCSCompiler.exe.config
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CoreCompileInputs.cache
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.dll
 C:\JustGraceWILProject\JustGraceWIL\WebApplication8\obj\Debug\WebApplication8.pdb
-D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CoreCompileInputs.cache
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.dll
 D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.pdb
@@ -225,3 +223,4 @@ C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csproj.CopyComplete
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.dll
 C:\Wil Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.pdb
+D:\Wil  Project\JustGraceWebWIL\WebApplication8\obj\Debug\WebApplication8.csprojAssemblyReference.cache

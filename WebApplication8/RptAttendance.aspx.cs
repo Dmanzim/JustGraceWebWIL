@@ -13,7 +13,15 @@ namespace WebApplication8
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(ddlStudent.DataValueField.Count() > 0)
+
+            if (Session["UserID"] == null)
+            {
+
+                Response.Redirect("Login.aspx");
+
+            }
+
+            if (ddlStudent.DataValueField.Count() > 0)
             {
 
             }
