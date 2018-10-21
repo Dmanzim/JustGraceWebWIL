@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication8.BusinessLogic;
 
 namespace WebApplication8
 {
@@ -15,12 +16,12 @@ namespace WebApplication8
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["UserID"] == null)
-            {
+            //if (Session["UserID"] == null)
+            //{
 
-                Response.Redirect("Login.aspx");
+            //    Response.Redirect("Login.aspx");
 
-            }
+            //}
 
 
             BusinessLogic.Student students = new BusinessLogic.Student();
@@ -46,7 +47,23 @@ namespace WebApplication8
 
             BusinessLogic.AbuseReport abused = new BusinessLogic.AbuseReport(0, int.Parse(Session["userID"].ToString()), int.Parse(ddlStudentName.SelectedValue.ToString()), currentStudent.GuardianId, txtDescription.Text.ToString(), txtActionTaken.Text.ToString(), txtComment.Text, DateTime.Now);
 
-            lblErr.Text = abused.InsertToDatabase();
+            string success = abused.InsertToDatabase();
+            
+            
+            if (success == "")
+            {
+                success = "Abuse was succesfully logged";
+                MessageBox.Show(this.Page , success);
+
+                txtActionTaken.Text = "";
+                txtComment.Text = "";
+                txtDescription.Text = "";
+            }
+            else
+            {
+                MessageBox.Show(this.Page, "Failed to log Abuse");
+            }
+
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
