@@ -38,13 +38,13 @@ namespace WebApplication8
             String whereStatement = "";
             BusinessLogic.Attendance newAttendance = new BusinessLogic.Attendance();
 
-            if (ddlStudent.Enabled)
+            if (ddlStudent.Visible)
             {
                 whereStatement = whereStatement + "Where tbl_Student.FLD_STUDENTID = " + int.Parse(ddlStudent.SelectedValue.ToString()) + "";
             }
             if (CalDateTo.Visible)
             {
-                if (ddlStudent.Enabled)
+                if (ddlStudent.Visible)
                 {
                     whereStatement = whereStatement + " and FLD_DATERECORDED >= '" + CalDateFrom.SelectedDate + "' and FLD_DATERECORDED <= '" + CalDateTo.SelectedDate + "'";
                 }
