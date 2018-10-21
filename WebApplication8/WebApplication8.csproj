@@ -76,7 +76,8 @@
     <Content Include="PushNotification.aspx" />
     <Content Include="RecordEducator.aspx" />
     <Content Include="RecordLessonSchedule.aspx" />
-    <Content Include="RptAttendance.aspx" />
+    <Content Include="Registration.aspx" />
+	<Content Include="RptAttendance.aspx" />
     <Content Include="RptLessons.aspx" />
     <Content Include="StudentRegistration.aspx" />
 >>>>>>> 01.03.00
