@@ -12,8 +12,10 @@ namespace WebApplication8
     public partial class MissingStudents : System.Web.UI.Page
     {
 
-        string whereDate;
+        DateTime whereDate;
         bool attend = false;
+        string date;
+        string selectedstud;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,17 +26,22 @@ namespace WebApplication8
             //    Response.Redirect("Login.aspx");
 
             //}
+            if (ddlStudentName.Items.Count > 0)
+            {
 
-            BusinessLogic.Student students = new BusinessLogic.Student();
+            }
+            else
+            {
+                BusinessLogic.Student students = new BusinessLogic.Student();
 
-            DataTable dt = students.getStudentNameDataTable();
+                DataTable dt = students.getStudentNameDataTable();
 
-            ddlStudentName.DataValueField = "FLD_STUDENTID";
-            ddlStudentName.DataTextField = "Name";
+                ddlStudentName.DataValueField = "FLD_STUDENTID";
+                ddlStudentName.DataTextField = "Name";
 
-            ddlStudentName.DataSource = dt;
-            ddlStudentName.DataBind();
-
+                ddlStudentName.DataSource = dt;
+                ddlStudentName.DataBind();
+            }
             
         }
 
@@ -52,11 +59,11 @@ namespace WebApplication8
 
         protected void calLessonDate_SelectionChanged(object sender, EventArgs e)
         {
-            whereDate = calLessonDate.SelectedDate.ToString("yyyy/MM/dd");
-            
+            whereDate = calLessonDate.SelectedDate;
 
+            date = whereDate.Date.ToString("yyyy/MM/dd");
             BusinessLogic.Lesson lessons = new BusinessLogic.Lesson();
-            DataTable dtls = lessons.getLessonDescriptionDataTable(whereDate);
+            DataTable dtls = lessons.getLessonDescriptionDataTable(date);
 
             ddlLesson.DataValueField = "fld_LessonID";
             ddlLesson.DataTextField = "fld_Description";
@@ -71,20 +78,11 @@ namespace WebApplication8
             thisstud.getStudent((int.Parse(ddlStudentName.SelectedValue.ToString())));
             string success = "1";
 
-            try
-            {
-                BusinessLogic.Attendance attendee = new BusinessLogic.Attendance(0, int.Parse(ddlLesson.SelectedValue.ToString()), int.Parse(ddlStudentName.SelectedValue.ToString()), thisstud.GuardianId, whereDate, attend);
+            
+            BusinessLogic.Attendance attendee = new BusinessLogic.Attendance(0, int.Parse(ddlLesson.SelectedValue.ToString()), int.Parse(ddlStudentName.SelectedValue), thisstud.GuardianId, calLessonDate.SelectedDate, attend);
                 success = attendee.InsertToDatabase();
+                Label1.Text = success;
 
-            } catch(Exception x)
-            {
-                string error = "oof" + x;
-                MessageBox.Show(this.Page, "Please select a valid date and select the lesson for that day");
-
-            }
-            finally
-            {
-            }
 
             
 
@@ -113,5 +111,7 @@ namespace WebApplication8
                 attend = true;
             }
         }
+
+      
     }
 }
