@@ -25,6 +25,10 @@ namespace WebApplication8.BusinessLogic
             this.durationInHours = durationInHours;
         }
 
+        public Lesson()
+        {
+        }
+
         public int ID1 { get => ID; set => ID = value; }
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string Description { get => description; set => description = value; }
@@ -120,6 +124,21 @@ namespace WebApplication8.BusinessLogic
         {
             DataTable dt = new DataTable();
             string query = "select * from tbl_Lesson";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+
+        public DataTable getLessonDescriptionDataTable(string where)
+        {
+            DataTable dt = new DataTable();
+            string query = "select FLD_lessonID, fld_description from tbl_Lesson where fld_Date = '" + where + "'";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             connection.Open();
