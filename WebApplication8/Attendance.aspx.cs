@@ -25,7 +25,7 @@ namespace WebApplication8
 
                 Response.Redirect("Login.aspx");
 
-            //}
+            }
             if (ddlStudentName.Items.Count > 0)
             {
 

@@ -73,7 +73,7 @@
                 <div>  
                     <br />
                     <form class="form" runat="server">
-                    <asp:Label ID="lblErrorMessage" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblErrorMessage" runat="server" Text="Label" Visible="False"></asp:Label>
                         <br />
                         Username:<br />
                         <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
