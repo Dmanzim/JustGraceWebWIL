@@ -73,13 +73,8 @@
     <Content Include="GuardianSignUp.aspx" />
     <Content Include="Attedance.aspx" />
     <Content Include="PushNotification.aspx" />
-<<<<<<< HEAD
-    <Content Include="RecordEducator.aspx" />
-    <Content Include="RecordLessonSchedule.aspx" />
-=======
-    <Content Include="RegisterEmployee.aspx" />
     <Content Include="RegisterLesson.aspx" />
->>>>>>> 01.03.00
+    <Content Include="RegisterEmployee.aspx" />
     <Content Include="RptAttendance.aspx" />
     <Content Include="RptLessons.aspx" />
     <Content Include="StudentRegistration.aspx" />
