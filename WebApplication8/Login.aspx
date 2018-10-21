@@ -79,7 +79,7 @@
                         <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                         <br />
                         Password:<br />
-                        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                         <br />
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" BackColor="#99CCFF" />
                         <br />
