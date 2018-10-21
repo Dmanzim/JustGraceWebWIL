@@ -75,6 +75,7 @@
     <Content Include="PushNotification.aspx" />
     <Content Include="RegisterLesson.aspx" />
     <Content Include="RegisterEmployee.aspx" />
+    <Content Include="RptAbuse.aspx" />
     <Content Include="RptAttendance.aspx" />
     <Content Include="RptLessons.aspx" />
     <Content Include="StudentRegistration.aspx" />
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="RegisterLesson.aspx.designer.cs">
       <DependentUpon>RegisterLesson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RptAbuse.aspx.cs">
+      <DependentUpon>RptAbuse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RptAbuse.aspx.designer.cs">
+      <DependentUpon>RptAbuse.aspx</DependentUpon>
     </Compile>
     <Compile Include="RptAttendance.aspx.cs">
       <DependentUpon>RptAttendance.aspx</DependentUpon>

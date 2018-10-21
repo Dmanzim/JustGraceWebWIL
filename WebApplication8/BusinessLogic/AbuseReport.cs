@@ -14,7 +14,10 @@ namespace WebApplication8.BusinessLogic
         private DateTime date;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
+        public AbuseReport()
+        {
 
+        }
         public AbuseReport(int ID, int recordedBy, int studentId, int guardianId, string description, string actionTaken, string comment, DateTime date)
         {
             this.iD = ID;
@@ -136,6 +139,64 @@ namespace WebApplication8.BusinessLogic
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+        public DataTable getAbuseRptDataTable(String whereStatement)
+        {
+            string query = "";
+            DataTable dt = new DataTable();
+            if (whereStatement == "")
+            {
+                query = "select CONCAT(tbl_Student.FLD_STUDFNAME, ' ',tbl_Student.FLD_STUDLNAME ) as [Student Name]," +
+                    "tbl_abuseReport.FLD_DESCRIPTION as [Description], " +
+                    "tbl_abuseReport.FLD_ACTIONTAKEN as [Action Take], " +
+                    "tbl_abuseReport.FLD_COMMENT as [Comment], " +
+                    "tbl_abusereport.FLD_DATE as [Date], " +
+                    "CONCAT(tbl_Guardian.FLD_FNAME, ' ', tbl_Guardian.FLD_LNAME) as [Guardian Name] " +
+                    "from tbl_abuseReport " +
+                    "join tbl_student on tbl_abuseReport.FLD_STUDENTID = tbl_student.FLD_STUDENTID " +
+                    "join tbl_Guardian on tbl_abuseReport.FLD_GUARDIANID = tbl_Guardian.FLD_GUARDIANID  ";
+            }
+            else
+            {
+                query = "select CONCAT(tbl_Student.FLD_STUDFNAME, ' ',tbl_Student.FLD_STUDLNAME ) as [Student Name]," +
+                    "tbl_abuseReport.FLD_DESCRIPTION as [Description], " +
+                    "tbl_abuseReport.FLD_ACTIONTAKEN as [Action Take], " +
+                    "tbl_abuseReport.FLD_COMMENT as [Comment], " +
+                    "tbl_abusereport.FLD_DATE as [Date], " +
+                    "CONCAT(tbl_Guardian.FLD_FNAME, ' ', tbl_Guardian.FLD_LNAME) as [Guardian Name] " +
+                    "from tbl_abuseReport " +
+                    "join tbl_student on tbl_abuseReport.FLD_STUDENTID = tbl_student.FLD_STUDENTID " +
+                    "join tbl_Guardian on tbl_abuseReport.FLD_GUARDIANID = tbl_Guardian.FLD_GUARDIANID " +
+                    " " + whereStatement + " ";
+            }
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch
+            {
+                query = "select CONCAT(tbl_Student.FLD_STUDFNAME, ' ',tbl_Student.FLD_STUDLNAME ) as [Student Name]," +
+                    "tbl_abuseReport.FLD_DESCRIPTION as [Description], " +
+                    "tbl_abuseReport.FLD_ACTIONTAKEN as [Action Take], " +
+                    "tbl_abuseReport.FLD_COMMENT as [Comment], " +
+                    "tbl_abusereport.FLD_DATE as [Date], " +
+                    "CONCAT(tbl_Guardian.FLD_FNAME, ' ', tbl_Guardian.FLD_LNAME) as [Guardian Name] " +
+                    "from tbl_abuseReport " +
+                    "join tbl_student on tbl_abuseReport.FLD_STUDENTID = tbl_student.FLD_STUDENTID " +
+                    "join tbl_Guardian on tbl_abuseReport.FLD_GUARDIANID = tbl_Guardian.FLD_GUARDIANID";
+
+                cmd = new SqlCommand(query, connection);
+                da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
             connection.Close();
             da.Dispose();
 

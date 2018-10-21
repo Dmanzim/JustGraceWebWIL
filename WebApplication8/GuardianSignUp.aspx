@@ -124,6 +124,9 @@
             </p>
             <p>
                 <asp:TextBox ID="txtContactNo" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID ="rcldAge" runat ="server" Display="Dynamic"
+                    ControlToValidate="txtContactNo" ErrorMessage ="Must only Enter numerical values"
+                    ValidateExpression="^[0-9]+$"></asp:RegularExpressionValidator>
             </p>
             <p>
                 ID Number:
