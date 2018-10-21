@@ -10,7 +10,7 @@
 namespace WebApplication8 {
     
     
-    public partial class RecordEducator {
+    public partial class RegisterEmployee {
         
         /// <summary>
         /// txtFirstName control.

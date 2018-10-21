@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication8
 {
-    public partial class RecordEducator : System.Web.UI.Page
+    public partial class RegisterEmployee : System.Web.UI.Page
     {
         back.SQLConnect sqlConn ;
         protected void Page_Load(object sender, EventArgs e)
