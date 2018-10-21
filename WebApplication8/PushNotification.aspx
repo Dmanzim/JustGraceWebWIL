@@ -25,11 +25,11 @@
                 <asp:TextBox ID="txtMessage" runat="server" Height="58px" Width="361px"></asp:TextBox>
                 <br />
                 Recipients:<br />
-                <asp:CheckBoxList ID="chkboxLstSendTo" runat="server" ValidateRequestMode="Disabled" Width="383px">
-                    <asp:ListItem>Students</asp:ListItem>
-                    <asp:ListItem>Guardians</asp:ListItem>
-                    <asp:ListItem>Staff</asp:ListItem>
-                </asp:CheckBoxList>
+                <asp:CheckBox ID="chkSendToStudent" runat="server" Text="Send To Student" />
+                <br />
+                <asp:CheckBox ID="chkSendToGuardian" runat="server" Text="Send To Guardian" />
+                <br />
+                <asp:CheckBox ID="chkSendToEmployee" runat="server" Text="Send To Employee" />
                 <br />
                 <br />
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />

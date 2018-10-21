@@ -4,22 +4,38 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication8.BusinessLogic;
 
 namespace WebApplication8
 {
     public partial class PushNotification : System.Web.UI.Page
     {
-        back.SQLConnect sqlConn ;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            sqlConn = new back.SQLConnect();
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            List<string> data = new List<string>();
+            bool isStaff = chkSendToEmployee.Checked;
+            bool isForStudent = chkSendToStudent.Checked;
+            bool isForGuardian = chkSendToGuardian.Checked;
 
+            int employeeID = int.Parse(Session["UserID"].ToString());
 
+            BusinessLogic.PushNotification newNotification = new BusinessLogic.PushNotification(0, employeeID, txtDescription.Text, txtMessage.Text, false, isStaff, isForStudent, isForGuardian,  DateTime.Now);
+            string result = newNotification.InsertToDatabase();
+
+            if(result != "")
+            {
+                //Error
+            }
+            else
+            {
+                txtDescription.Text = "";
+                txtMessage.Text = "";
+            }
 
         }
 

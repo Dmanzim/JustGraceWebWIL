@@ -27,8 +27,7 @@ namespace WebApplication8
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {
-            List<string> data = new List<string>();
+        {            
 
 
 

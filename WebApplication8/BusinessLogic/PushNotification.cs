@@ -9,16 +9,16 @@ namespace WebApplication8.BusinessLogic
 {
     public class PushNotification
     {
-        private int ID, staffID;
+        private int ID, employeeID;
         private string description, message;
         private bool sent, isStaff, isForStudent, isForGuardian;
         private DateTime date;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
-        public PushNotification(int iD, int staffID, string description, string message, bool sent, bool isStaff, bool isForStudent, bool isForGuardian, DateTime date)
+        public PushNotification(int iD, int employeeID, string description, string message, bool sent, bool isStaff, bool isForStudent, bool isForGuardian, DateTime date)
         {
             ID = iD;
-            this.staffID = staffID;
+            this.employeeID = employeeID;
             this.description = description;
             this.message = message;
             this.sent = sent;
@@ -29,7 +29,7 @@ namespace WebApplication8.BusinessLogic
         }
 
         public int ID1 { get => ID; set => ID = value; }
-        public int StaffID { get => staffID; set => staffID = value; }
+        public int EmployeeID { get => employeeID; set => employeeID = value; }
         public string Description { get => description; set => description = value; }
         public string Message { get => message; set => message = value; }
         public bool Sent { get => sent; set => sent = value; }
@@ -44,8 +44,8 @@ namespace WebApplication8.BusinessLogic
             connection.Open();
             try
             {
-                string sql = "Insert into tbl_PushNotification (FLD_DESCRIPTION,FLD_MESSAGE,FLD_SENT,FLD_DATE,FLD_ISSTAFF,FLD_ISSTUDENT,FLD_ISGUARDIAN,FLD_STAFFID) " +
-                    "values ('" + this.description + "','" + this.message + "','" + this.sent + "','" + this.date + "','" + this.isStaff + "','" + this.isForStudent + "', '" + this.isForGuardian + ", '" + this.staffID + "'')";
+                string sql = "Insert into tbl_PushNotification (FLD_DESCRIPTION,FLD_MESSAGE,FLD_SENT,FLD_DATE,FLD_ISSTAFF,FLD_ISSTUDENT,FLD_ISGUARDIAN,FLD_EmployeeID) " +
+                    "values ('" + this.description + "','" + this.message + "','" + this.sent + "','" + this.date + "','" + this.isStaff + "','" + this.isForStudent + "', '" + this.isForGuardian + ", '" + this.employeeID + "'')";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
@@ -75,7 +75,7 @@ namespace WebApplication8.BusinessLogic
                     "FLD_ISSTAFF = '" + this.isStaff + "'," +
                     "FLD_ISSTUDENT = '" + this.isForStudent + "'," +
                     "FLD_ISGUARDIAN = '" + this.isForGuardian + "'," +
-                    ",FLD_STAFFID = '" + this.staffID + "' where fld_PushId = '"+ PushNotificationID + "'";
+                    ",FLD_EmployeeID = '" + this.employeeID + "' where fld_PushId = '"+ PushNotificationID + "'";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
                 result = "";
@@ -113,7 +113,7 @@ namespace WebApplication8.BusinessLogic
                     this.isStaff = bool.Parse(dataReader.GetValue(5).ToString());
                     this.isForStudent = bool.Parse(dataReader.GetValue(6).ToString());
                     this.isForGuardian = bool.Parse(dataReader.GetValue(7).ToString());
-                    this.staffID = int.Parse(dataReader.GetValue(8).ToString());
+                    this.employeeID = int.Parse(dataReader.GetValue(8).ToString());
                     
                 }
                 dataReader.Close();
