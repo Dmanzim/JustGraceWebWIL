@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>JustGrace</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="StyleSheet1.css">
     <body>
@@ -14,7 +14,7 @@
    <div id="wrapper">
 
         
-       <div id="sidebar-wrapper">
+               <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -49,11 +49,15 @@
     <p><a href="<%= Page.ResolveUrl("~//RptAttendance.aspx") %>">Attendance</a</p>
       <p><a href="<%= Page.ResolveUrl("~//RptAbuse.aspx") %>">Abuse</a</p>
       <p><a href="<%= Page.ResolveUrl("~//RptLessons.aspx") %>">Lessons</a</p>
+      <p><a href="<%= Page.ResolveUrl("~//RptStudents.aspx") %>">Students</a</p>
       
       
   </div>
 </div>
                 </li>
+                <li>
+                   <a href="<%= Page.ResolveUrl("~//Login.aspx") %>">Logout</a>
+                </li> 
             </ul>
         </div>
         

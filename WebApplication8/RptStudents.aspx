@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentRegistration.aspx.cs" Inherits="WebApplication8.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RptStudents.aspx.cs" Inherits="WebApplication8.RptStudents" %>
+
 
 <!DOCTYPE html>
-
 <html>
 <title>JustGrace</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,70 +64,92 @@
         
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <div class="row">
-
-
-   <img src="justGrace.png" alt="logo">
-                    <div class="col-lg-12">
+                <div class="row">                   
+					
+					<div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
-        <form class="form" runat="server">
+				 <div class = 'auto-style1'>
+        <form class="form1"  runat="server">
             <div>
+    <img src="justGrace.png" alt="logo" class="auto-style6">
+                <br />
+                <asp:Button ID="btnStudentFilter" runat="server" Text="Enable/Disable Student Filter" OnClick="btnStudentFilter_Click" />
+                <br />
+                <br />                
+                <asp:Label ID="Label1" runat="server" Text="Student:"></asp:Label>
+                <br />
+                <asp:DropDownList ID="ddlStudent" runat="server" Width="187px"></asp:DropDownList>
+                <br />
+                <br />
+                <div class="auto-style2">
+                
+                </div>
+                <asp:Button ID="btnRefresh" runat="server" Text="Refresh" OnClick="btnRefresh_Click" />
             </div>
-            <p>
-                Enter Guardian Details Below
-            </p>
-            <p>
-                Guardian First Name:
-            </p>
-            <p>
-                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Guardian Surname:
-            </p>
-            <p>
-                <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Password:
-            </p>
-            <p>
-                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Email Address:
-            </p>
-            <p>
-                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Physical Address:
-            </p>
-            <p>
-                <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Contact Number:
-            </p>
-            <p>
-                <asp:TextBox ID="txtContactNo" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                ID Number:
-            </p>
-            <p>
-                <asp:TextBox ID="txtIdNumber" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" />
-            </p>
-            <p>
-                <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>
-            </p>
-
+            <br />
+            <br />
+            <asp:GridView ID="gvAttendance" runat="server" Height="331px" Width="915px" CssClass="auto-style7"></asp:GridView>
         </form>
     </div>
+    
+
+    	
+					
+    
+
+
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+<div class="w3-container" style="margin-left:160px">
+</div>
+
+<script>
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+
+function myDropFunc() {
+    var x = document.getElementById("demoDrop");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+</script>
+
 </body>
 </html>

@@ -155,5 +155,52 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        public DataTable getStudentReportDataTable(string whereStatement)
+        {
+            string query = "";
+            DataTable dt = new DataTable();
+            if (whereStatement == "")
+            {
+                query = "select CONCAT(tbl_student.FLD_STUDFNAME, ' ', tbl_student.FLD_STUDLNAME ) as [Name]," +
+                    " CONCAT(tbl_guardian.FLD_FNAME, ' ',tbl_guardian.FLD_LNAME ) as [Guardian Name]," +
+                    " tbl_student.FLD_ACTIVE as [Is Active]  " +
+                    "from tbl_student " +
+                    "join tbl_guardian on tbl_student.FLD_GUARDIANID = tbl_guardian.FLD_GUARDIANID ";
+            }
+            else
+            {
+                query = "select CONCAT(tbl_student.FLD_STUDFNAME, ' ', tbl_student.FLD_STUDLNAME ) as [Name]," +
+                        " CONCAT(tbl_guardian.FLD_FNAME, ' ',tbl_guardian.FLD_LNAME ) as [Guardian Name]," +
+                        " tbl_student.FLD_ACTIVE as [Is Active]  " +
+                        "from tbl_student " +
+                        "join tbl_guardian on tbl_student.FLD_GUARDIANID = tbl_guardian.FLD_GUARDIANID " +
+                        " " + whereStatement + " ";
+            }
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            try
+            {
+                da.Fill(dt);
+            }
+            catch
+            {
+                query = "select CONCAT(tbl_student.FLD_STUDFNAME, ' ', tbl_student.FLD_STUDLNAME ) as [Name]," +
+                    " CONCAT(tbl_guardian.FLD_FNAME, ' ',tbl_guardian.FLD_LNAME ) as [Guardian Name]," +
+                    " tbl_student.FLD_ACTIVE as [Is Active]  " +
+                    "from tbl_student " +
+                    "join tbl_guardian on tbl_student.FLD_GUARDIANID = tbl_guardian.FLD_GUARDIANID ";
+
+                cmd = new SqlCommand(query, connection);
+                da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
     }
 }
