@@ -90,7 +90,7 @@
                 <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
             </div>
             <p>
-                Record Student Attendance:
+                <h2>Record Student Attendance:</h2>
             </p>
             <p>
                 Please note a message will be sent to the guardian regarding their childs missed session.

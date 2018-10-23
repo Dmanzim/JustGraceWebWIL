@@ -91,7 +91,10 @@
             <div>
             </div>
             <p>
-                Record Educator:
+                <h2>Register Employee :</h2>
+            </p>
+            <p>
+                Enter Employee details below :
             </p>
             <p>
                 First Name:

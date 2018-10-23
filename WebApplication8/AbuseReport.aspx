@@ -90,6 +90,9 @@
                 <asp:Label ID="lblErr" runat="server"></asp:Label>
             </div>
             <p>
+                <h2>Log Abuse Report:</h2>
+            </p>
+            <p>
                 Record Abuse Reports Below:
             </p>
             <p>

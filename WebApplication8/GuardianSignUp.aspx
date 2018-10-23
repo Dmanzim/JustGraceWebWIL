@@ -88,6 +88,9 @@
             <div>
             </div>
             <p>
+                <h2>Register Guardian:</h2>
+            </p>
+            <p>
                 Enter Guardian Details Below
             </p>
             <p>

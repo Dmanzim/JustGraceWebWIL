@@ -75,6 +75,9 @@
             <div>
             </div>
             <p>
+                <h2>Register Student:</h2>
+            </p>
+            <p>
                 Enter Guardian Details Below
             </p>
             <p>
@@ -102,22 +105,10 @@
                 <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             </p>
             <p>
-                Physical Address:
+                Guardian:
             </p>
             <p>
-                <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Contact Number:
-            </p>
-            <p>
-                <asp:TextBox ID="txtContactNo" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                ID Number:
-            </p>
-            <p>
-                <asp:TextBox ID="txtIdNumber" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="ddlGuardian" runat="server" Width="155px"></asp:DropDownList>
             </p>
             <p>
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
