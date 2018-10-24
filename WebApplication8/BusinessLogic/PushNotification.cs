@@ -9,12 +9,14 @@ namespace WebApplication8.BusinessLogic
 {
     public class PushNotification
     {
+        //Declare variables for the class (attributes)
         private int ID, employeeID;
         private string description, message;
         private bool sent, isStaff, isForStudent, isForGuardian;
         private DateTime date;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
+        //Custom constructor for this class
         public PushNotification(int iD, int employeeID, string description, string message, bool sent, bool isStaff, bool isForStudent, bool isForGuardian, DateTime date)
         {
             ID = iD;
@@ -28,6 +30,7 @@ namespace WebApplication8.BusinessLogic
             this.date = date;
         }
 
+        //Gets and sets for this class
         public int ID1 { get => ID; set => ID = value; }
         public int EmployeeID { get => employeeID; set => employeeID = value; }
         public string Description { get => description; set => description = value; }
@@ -38,6 +41,7 @@ namespace WebApplication8.BusinessLogic
         public bool IsForGuardian { get => isForGuardian; set => isForGuardian = value; }
         public DateTime Date { get => date; set => date = value; }
 
+        //Insert into the db
         public string InsertToDatabase()
         {
             string result = "";
@@ -61,6 +65,8 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+
+        //Updates the database based on the ID given
         public string UpdateToDatabase(int PushNotificationID)
         {
             string result = "";
@@ -90,7 +96,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Will get the student from the databse based on his ID and will fill the details into the object
         public string getPushNotification(int PushNotificationID)
         {
             string result = "";
@@ -130,7 +136,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a dataTable of the push notification table
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();            

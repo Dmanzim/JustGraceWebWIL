@@ -9,16 +9,16 @@ namespace WebApplication8.BusinessLogic
 {
     public class Student
     {
+        //Declare variables for the class (attributes)
         private int ID, guardianId;
         private string fName, lName, password, email;
         private bool isActive;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
-        public Student()
-        {
+        //Default constructor
+        public Student() { }
 
-        }
-
+        //Custom constructor for this class
         public Student(int iD, int guardianId, string fName, string lName, string password, bool isActive, string email)
         {
             ID = iD;
@@ -30,6 +30,7 @@ namespace WebApplication8.BusinessLogic
             this.email = email;
         }
 
+        //Gets and Sets for the variable of this class
         public int ID1 { get => ID; set => ID = value; }
         public int GuardianId { get => guardianId; set => guardianId = value; }
         public string FName { get => fName; set => fName = value; }
@@ -41,6 +42,7 @@ namespace WebApplication8.BusinessLogic
         public string Password1 { get => password; set => password = value; }
         public string Email { get => email; set => email = value; }
 
+        //Used to insert the object into the databse
         public string  InsertToDatabase()
         {
             string result = "";
@@ -64,6 +66,8 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+
+        //Used to update the database based on that specific ID
         public string UpdateToDatabase(int studentID)
         {
             string result = "";
@@ -91,7 +95,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Will get the student from the databse based on his ID and will fill the details into the object
         public string getStudent(int studentID)
         {
             string result = "";
@@ -127,6 +131,7 @@ namespace WebApplication8.BusinessLogic
             }
                 return result;
         }
+        //Gets a dataTable of the student table
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();
@@ -141,6 +146,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Gets the entries for the student drop down lists
         public DataTable getStudentNameDataTable()
         {
             DataTable dt = new DataTable();
@@ -155,10 +161,13 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+
+        //Returns a datatable with the information for the report.
         public DataTable getStudentReportDataTable(string whereStatement)
         {
             string query = "";
             DataTable dt = new DataTable();
+            //Checking if there is a where statement
             if (whereStatement == "")
             {
                 query = "select CONCAT(tbl_student.FLD_STUDFNAME, ' ', tbl_student.FLD_STUDLNAME ) as [Name]," +

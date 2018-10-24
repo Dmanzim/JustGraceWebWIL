@@ -8,6 +8,7 @@ namespace WebApplication8.BusinessLogic
 {
     public static class MessageBox
     {
+        //Shows a message box for our Errors and messages in the app
         public static void Show(this Page Page, String Message)
         {
             Page.ClientScript.RegisterStartupScript(

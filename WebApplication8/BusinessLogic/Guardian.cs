@@ -9,11 +9,13 @@ namespace WebApplication8.BusinessLogic
 {
     public class Guardian
     {
+        //Declare variables for the class (attributes)
         private int ID;
         private string fName, lName, contact, email, address, password;
         bool isActive;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
+        //Custom constructor for this class
         public Guardian(int iD, string fName, string lName, string contact, string email, string address, bool isActive, string password)
         {
             ID = iD;
@@ -25,11 +27,12 @@ namespace WebApplication8.BusinessLogic
             this.isActive = isActive;
             this.password = password;
         }
-
+        //Default constructor for this class
         public Guardian()
         {
         }
 
+        //Gets and sets for this class
         public int ID1 { get => ID; set => ID = value; }
         public string FName { get => FName1; set => FName1 = value; }
         public string LName { get => LName1; set => LName1 = value; }
@@ -44,6 +47,7 @@ namespace WebApplication8.BusinessLogic
         public string Address1 { get => address; set => address = value; }
         public string Password { get => password; set => password = value; }
 
+        //inserts into the database
         public string InsertToDatabase()
         {
             string result = "";
@@ -67,6 +71,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+        //Updates the databsed based on ID
         public string UpdateToDatabase(int guardianID)
         {
             string result = "";
@@ -95,7 +100,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets the specified guardian using ID
         public string getGuardian(int guardianID)
         {
             string result = "";
@@ -134,7 +139,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a datatable of the guardian table
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();
@@ -149,7 +154,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
-
+        //Gets a datatable for the guardian drop down
         public DataTable getGuardianDropDownDataTable()
         {
             DataTable dt = new DataTable();

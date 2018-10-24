@@ -10,11 +10,12 @@ namespace WebApplication8.BusinessLogic
 {
     public class Attendance
     {
+        //Declare variables for the class (attributes)
         private int iD, lessonId, studentId, guardianId;
         private DateTime dateRecorded;
         bool didAttend;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
-
+        //Custom constructor for this class
         public Attendance(int ID, int lessonId, int studentId, int guardianId, DateTime dateRecorded, bool didAttend)
         {
             this.ID = ID;
@@ -24,11 +25,11 @@ namespace WebApplication8.BusinessLogic
             this.DateRecorded = dateRecorded;
             this.DidAttend = didAttend;
         }
-
+        //Default constructor for this class
         public Attendance()
         {
         }
-
+        //Gets and sets for this class
         public int ID { get => iD; set => iD = value; }
         public int LessonId { get => lessonId; set => lessonId = value; }
         public int StudentId { get => studentId; set => studentId = value; }
@@ -36,6 +37,7 @@ namespace WebApplication8.BusinessLogic
         public DateTime DateRecorded { get => dateRecorded; set => dateRecorded = value; }
         public bool DidAttend { get => didAttend; set => didAttend = value; }
 
+        //Insert into the databse 
         public string InsertToDatabase()
         {
             string result = "";
@@ -60,6 +62,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+        //Updates the databse item at that ID
         public string UpdateToDatabase(int AttendanceID)
         {
             string result = "";
@@ -86,7 +89,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Based on ID it gets that attendace item
         public string getAttendance(int attendanceID)
         {
             string result = "";
@@ -123,7 +126,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a datatable of the attendance table
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();
@@ -138,6 +141,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Gets a datatable for the report using a possible where
         public DataTable getAttendanceRptDataTable(String whereStatement)
         {
             string query = "";

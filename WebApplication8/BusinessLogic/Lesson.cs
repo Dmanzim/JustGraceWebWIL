@@ -9,17 +9,19 @@ namespace WebApplication8.BusinessLogic
 {
     public class Lesson
     {
+        //Declare variables for the class (attributes)
         private int ID, employeeId;
         private string description;
         private DateTime lessonDate;
         private double durationInHours;
 
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
-
+        //Defualt constructor for this class
         public Lesson()
         {
 
         }
+        //Custom constructor for this class
         public Lesson(int iD, int employeeId, string description, DateTime lessonDate, double durationInHours)
         {
             ID = iD;
@@ -30,13 +32,14 @@ namespace WebApplication8.BusinessLogic
         }
 
        
-
+        //Gets and sets for the variables
         public int ID1 { get => ID; set => ID = value; }
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string Description { get => description; set => description = value; }
         public DateTime LessonDate { get => lessonDate; set => lessonDate = value; }
         public double DurationInHours { get => durationInHours; set => durationInHours = value; }
 
+        //Insert the object and data into the DB
         public string InsertToDatabase()
         {
             string result = "";
@@ -62,6 +65,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+        //Update the db with the ID that is given
         public string UpdateToDatabase(int lessonID)
         {
             string result = "";
@@ -87,7 +91,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a lessona dn fills the info into the object of this class
         public string getLesson(int lessonID)
         {
             string result = "";
@@ -123,7 +127,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Returns a datatable of the lesson table
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();
@@ -138,6 +142,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Returns a datatable for the report data
         public DataTable getReportDataTable(String whereStatement)
         {
             string query = "";
@@ -188,7 +193,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
-
+        //Returns a datatable for the lesson drop down
         public DataTable getLessonDescriptionDataTable(string where)
         {
             DataTable dt = new DataTable();

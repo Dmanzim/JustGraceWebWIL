@@ -6,11 +6,13 @@ namespace WebApplication8.BusinessLogic
 {
     public class Employee
     {
+        //Declare variables for the class (attributes)
         private int iD, employeeTypeId;
         private string fName, lName, contactNumber, email, password;
         private bool isActive;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
 
+        //Default constructor for this class
         public Employee()
         {
             this.ID = 0;
@@ -21,6 +23,7 @@ namespace WebApplication8.BusinessLogic
             this.password = "";
             this.isActive = false;
         }
+        //Custom constructor for this class
         public Employee(int iD, string fName, string lName, string contactNumber, string email, string password, bool isActive, int employeeTypeID)
         {
             this.ID1 = ID;
@@ -32,7 +35,7 @@ namespace WebApplication8.BusinessLogic
             this.isActive = isActive;
             this.employeeTypeId = employeeTypeID;
         }
-
+        //Gets and sets for this class
         public int ID { get => ID1; set => ID1 = value; }
         public string FName { get => fName; set => fName = value; }
         public string LName { get => lName; set => lName = value; }
@@ -43,6 +46,8 @@ namespace WebApplication8.BusinessLogic
         public int ID1 { get => iD; set => iD = value; }
         public int EmployeeTypeId { get => employeeTypeId; set => employeeTypeId = value; }
 
+
+        //Used to validate the user  information
         public bool loginEmployee()
         {
             bool loggedIn = false;
@@ -75,7 +80,7 @@ namespace WebApplication8.BusinessLogic
 
             return loggedIn;
         }
-
+        //Inserts a new employee into the database
         public string InsertToDatabase()
         {
             string result = "";
@@ -99,6 +104,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+        //Updates the database 
         public string UpdateToDatabase(int EmployeeID)
         {
             string result = "";
@@ -127,7 +133,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets the employee info from the db based of the ID
         public string getEmployee(int employeeID)
         {
             string result = "";
@@ -166,7 +172,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a datatable for the employee table 
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();
@@ -181,6 +187,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Gets a datatable of the teachers 
         public DataTable getEmployeeTeachersNameDataTable()
         {
             DataTable dt = new DataTable();
@@ -195,6 +202,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Gets a datatable of the admins 
         public DataTable getEmployeeAdminNameDataTable()
         {
             DataTable dt = new DataTable();
@@ -209,6 +217,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Gets a datatable of the employee types for the drop down
         public DataTable getEmployeeTypeDataTable()
         {
             DataTable dt = new DataTable();

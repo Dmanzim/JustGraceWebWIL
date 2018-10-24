@@ -9,15 +9,17 @@ namespace WebApplication8.BusinessLogic
 {
     public class AbuseReport
     {
+        //Declare variables for the class (attributes)
         private int iD, recordedBy, studentId, guardianId;
         private string description, actionTaken, comment;
         private DateTime date;
         protected SqlConnection connection = new SqlConnection(Properties.Settings.Default.connectionStr);
-
+        //Default constructor for this class
         public AbuseReport()
         {
 
         }
+        //Custom constructor for this class
         public AbuseReport(int ID, int recordedBy, int studentId, int guardianId, string description, string actionTaken, string comment, DateTime date)
         {
             this.iD = ID;
@@ -30,6 +32,7 @@ namespace WebApplication8.BusinessLogic
             this.date = date;
         }
 
+        //Gets and sets for this class
         public int ID { get => iD; set => iD = value; }
         public int RecordedBy { get => recordedBy; set => recordedBy = value; }
         public int StudentId { get => studentId; set => studentId = value; }
@@ -39,6 +42,7 @@ namespace WebApplication8.BusinessLogic
         public string Comment { get => comment; set => comment = value; }
         public DateTime Date { get => date; set => date = value; }
 
+        //Insderts into the database
         public string InsertToDatabase()
         {
             string result = "";
@@ -62,6 +66,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
+        //Upodates the databse 
         public string UpdateToDatabase(int reportID)
         {
             string result = "";
@@ -90,7 +95,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a specific abuse report
         public string getAbuseReport(int reportID)
         {
             string result = "";
@@ -129,7 +134,7 @@ namespace WebApplication8.BusinessLogic
             }
             return result;
         }
-
+        //Gets a datatable of abuse report
         public DataTable getDataTable()
         {
             DataTable dt = new DataTable();
@@ -144,6 +149,7 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        //Gets a datatable for the report using a possible where that is passed
         public DataTable getAbuseRptDataTable(String whereStatement)
         {
             string query = "";
