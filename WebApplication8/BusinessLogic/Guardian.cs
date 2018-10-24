@@ -26,6 +26,10 @@ namespace WebApplication8.BusinessLogic
             this.password = password;
         }
 
+        public Guardian()
+        {
+        }
+
         public int ID1 { get => ID; set => ID = value; }
         public string FName { get => FName1; set => FName1 = value; }
         public string LName { get => LName1; set => LName1 = value; }
@@ -135,6 +139,21 @@ namespace WebApplication8.BusinessLogic
         {
             DataTable dt = new DataTable();
             string query = "select * from tbl_Guardian";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+
+        public DataTable getGuardianDropDownDataTable()
+        {
+            DataTable dt = new DataTable();
+            string query = "select FLD_GUARDIANID as [ID] , CONCAT(FLD_FNAME, ' ',FLD_LNAME ) as [Name] from tbl_Guardian";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             connection.Open();

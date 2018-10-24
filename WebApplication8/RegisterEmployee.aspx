@@ -40,6 +40,9 @@
                    <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
                 </li>
                 <li>
+                   <a href="<%= Page.ResolveUrl("~//RegisterLesson.aspx") %>">Schedule Classes</a>
+                </li>
+                <li>
                    <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
                 </li>                
                 <li>
@@ -64,26 +67,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-				
-    
-    
-    
-   
-    <img src="justGrace.png" alt="logo">
+                     <img src="justGrace.png" alt="logo">
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
@@ -118,14 +102,8 @@
                 Email Address:
             </p>
             <p>
-                <asp:TextBox ID="txtEmailAddress" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
-            </p>
-            <p>
-                National ID:
-            </p>
-            <p>
-                <asp:TextBox ID="txtNationalId" runat="server"></asp:TextBox>
-            </p>
+                <asp:TextBox ID="txtEmailAddress" runat="server" ></asp:TextBox>
+            </p>            
             <p>
                 Password:
             </p>
@@ -133,22 +111,17 @@
                 <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             </p>
             <p>
+                Employee Type:
+            </p>
+            <p>
+                <asp:DropDownList ID="ddlEmployeeType" runat="server"></asp:DropDownList>
+            </p>
+            <br />
+            <p>
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
         </form>
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-                </div>
+			</div>
             </div>
         </div>
 

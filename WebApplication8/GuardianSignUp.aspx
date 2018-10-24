@@ -40,6 +40,9 @@
                    <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
                 </li>
                 <li>
+                   <a href="<%= Page.ResolveUrl("~//RegisterLesson.aspx") %>">Schedule Classes</a>
+                </li>
+                <li>
                    <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
                 </li>                
                 <li>
@@ -135,7 +138,6 @@
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
                 <br />
                 <br />
-                <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" Width="80px" />
             </p>
             <p>
                 <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>

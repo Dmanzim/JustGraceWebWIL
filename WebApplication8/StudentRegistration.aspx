@@ -6,16 +6,16 @@
 <title>JustGrace</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="StyleSheet1.css">
-    <body>
+<body>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-   <div id="wrapper">
+    <div id="wrapper">
 
-        
-                <div id="sidebar-wrapper">
+
+        <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -39,6 +39,9 @@
                 </li>
                 <li>
                    <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
+                </li>
+                <li>
+                   <a href="<%= Page.ResolveUrl("~//RegisterLesson.aspx") %>">Schedule Classes</a>
                 </li>
                 <li>
                    <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
@@ -67,58 +70,61 @@
                 <div class="row">
 
 
-   <img src="justGrace.png" alt="logo">
+                    <img src="justGrace.png" alt="logo">
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
-        <form class="form" runat="server">
-            <div>
-            </div>
-            <p>
-                <h2>Register Student:</h2>
-            </p>
-            <p>
-                Enter Guardian Details Below
-            </p>
-            <p>
-                Guardian First Name:
-            </p>
-            <p>
-                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Guardian Surname:
-            </p>
-            <p>
-                <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Password:
-            </p>
-            <p>
-                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Email Address:
-            </p>
-            <p>
-                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-            </p>
-            <p>
-                Guardian:
-            </p>
-            <p>
-                <asp:DropDownList ID="ddlGuardian" runat="server" Width="155px"></asp:DropDownList>
-            </p>
-            <p>
-                <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnDiscard" runat="server" Text="Discard" OnClick="Button2_Click" BackColor="#99CCFF" />
-            </p>
-            <p>
-                <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>
-            </p>
+                    <form class="form" runat="server">
+                        <div>
+                        </div>
+                        <p>
+                            <h2>Register Student:</h2>
+                        </p>
+                        <p>
+                            Enter Student Details Below
+                        </p>
+                        <p>
+                            Student First Name:
+                        </p>
+                        <p>
+                            <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+                        </p>
+                        <p>
+                            Student Surname:
+                        </p>
+                        <p>
+                            <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
+                        </p>
+                        <p>
+                            Password:
+                        </p>
+                        <p>
+                            <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                        </p>
+                        <p>
+                            Email Address:
+                        </p>
+                        <p>
+                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                        </p>
+                        <p>
+                            Guardian:
+                        </p>
+                        <p>
+                            <asp:DropDownList ID="ddlGuardian" runat="server" Width="155px"></asp:DropDownList>
+                        </p>
+                        <br />
+                        <br />
+                        <p>
+                            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#99CCFF" Width="127px" />
+                            <br />                            
+                            <br />
+                        </p>
+                        <p>
+                            <asp:Label ID="lblRegisterSuccess" runat="server"></asp:Label>
+                        </p>
 
-        </form>
-    </div>
+                    </form>
+                </div>
 </body>
 </html>

@@ -40,6 +40,9 @@
                    <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
                 </li>
                 <li>
+                   <a href="<%= Page.ResolveUrl("~//RegisterLesson.aspx") %>">Schedule Classes</a>
+                </li>
+                <li>
                    <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
                 </li>                
                 <li>
@@ -102,7 +105,7 @@
                 Student Name:
             </p>
             <%--<p>--%>
-                <asp:DropDownList ID="ddlStudentName" runat="server" OnSelectedIndexChanged="ddlStudentName_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlStudentName" runat="server" >
                 </asp:DropDownList>
             </p>
             <p>
@@ -123,8 +126,7 @@
             <p>
                 <asp:TextBox ID="txtComment" runat="server" Height="74px" Width="450px"></asp:TextBox>
             </p>
-            <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" BackColor="#99CCFF" />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" BackColor="#99CCFF" />
+            <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" BackColor="#99CCFF" Width="134px" />
         </form>
 					
 					

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication8.BusinessLogic;
 
 namespace WebApplication8
 {
@@ -12,31 +13,37 @@ namespace WebApplication8
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //check if the user is logged in or not. kick them out if they are not
             if (Session["UserID"] == null)
             {
 
                 Response.Redirect("Login.aspx");
 
             }
-
-            if (ddlStudent.DataValueField.Count() > 0)
-            {
-
-            }
+            //Check if the drop down box is populated and fill it if it isnt
+            if (ddlStudent.DataValueField.Count() > 0){ }
             else
             {
+                //Get data table and fill the drop down list
                 BusinessLogic.Student studObj = new BusinessLogic.Student();
-
-                DataTable dt = studObj.getStudentNameDataTable();
-
-                ddlStudent.DataValueField = "FLD_STUDENTID";
-                ddlStudent.DataTextField = "Name";
-
-                ddlStudent.DataSource = dt;
-                ddlStudent.DataBind();
+                try
+                {
+                    if (ddlStudent.DataValueField.Count() > 0) { }
+                    else
+                    {
+                        DataTable dt = studObj.getStudentNameDataTable();
+                        ddlStudent.DataValueField = "FLD_STUDENTID";
+                        ddlStudent.DataTextField = "Name";
+                        ddlStudent.DataSource = dt;
+                        ddlStudent.DataBind();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, "Failed to get database information. Error :" + ex);
+                }
             }
         }
-
         protected void btnStudentFilter_Click(object sender, EventArgs e)
         {
             if (ddlStudent.Visible)
@@ -88,11 +95,16 @@ namespace WebApplication8
                     whereStatement = " where tbl_abuseReport.FLD_DATE >= '" + CalDateFrom.SelectedDate + "' and tbl_abuseReport.FLD_DATE <= '" + CalDateTo.SelectedDate + "'";
                 }
             }
-
-            DataTable dt = newAbuseReport.getAbuseRptDataTable(whereStatement); 
-
-            gvAbuse.DataSource = dt;
-            gvAbuse.DataBind();
+            try
+            {
+                DataTable dt = newAbuseReport.getAbuseRptDataTable(whereStatement);
+                gvAbuse.DataSource = dt;
+                gvAbuse.DataBind();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Failed to get database information. Error :" + ex);
+            }
         }
     }
 }

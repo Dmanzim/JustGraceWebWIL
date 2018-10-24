@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -25,7 +21,7 @@ namespace WebApplication8.BusinessLogic
             this.password = "";
             this.isActive = false;
         }
-        public Employee(int iD, string fName, string lName, string contactNumber, string email, string password, bool isActive,int employeeTypeID)
+        public Employee(int iD, string fName, string lName, string contactNumber, string email, string password, bool isActive, int employeeTypeID)
         {
             this.ID1 = ID;
             this.fName = fName;
@@ -69,7 +65,7 @@ namespace WebApplication8.BusinessLogic
                 dataReader.Close();
                 command.Dispose();
             }
-            catch (Exception NoResuslts)
+            catch (Exception)
             {
             }
             finally
@@ -213,7 +209,21 @@ namespace WebApplication8.BusinessLogic
 
             return dt;
         }
+        public DataTable getEmployeeTypeDataTable()
+        {
+            DataTable dt = new DataTable();
+            string query = "select FLD_EMPLOYEETYPEID as [ID],  FLD_DESCRIPTION as [Name] from tbl_employeetype";
 
-        
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            connection.Close();
+            da.Dispose();
+
+            return dt;
+        }
+
+
     }
 }

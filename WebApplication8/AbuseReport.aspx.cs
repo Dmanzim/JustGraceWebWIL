@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using WebApplication8.BusinessLogic;
 
 namespace WebApplication8
@@ -15,65 +10,56 @@ namespace WebApplication8
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //check if the user is logged in or not. kick them out if they are not
             if (Session["UserID"] == null)
             {
-
                 Response.Redirect("Login.aspx");
-
             }
-
-
             BusinessLogic.Student students = new BusinessLogic.Student();
-
-            DataTable dt = students.getStudentNameDataTable();
-
-            ddlStudentName.DataValueField = "FLD_STUDENTID";
-            ddlStudentName.DataTextField = "Name";
-
-            ddlStudentName.DataSource = dt;
-            ddlStudentName.DataBind();
-
-            
-
+            try
+            {
+                if (ddlStudentName.Items.Count > 0) { }
+                else
+                {
+                    DataTable dt = students.getStudentNameDataTable();
+                    ddlStudentName.DataValueField = "FLD_STUDENTID";
+                    ddlStudentName.DataTextField = "Name";
+                    ddlStudentName.DataSource = dt;
+                    ddlStudentName.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Failed to get database information. Error :" + ex);
+            }
         }
-
         protected void btnSave_Click(object sender, EventArgs e)
         {
             BusinessLogic.Student currentStudent = new BusinessLogic.Student();
-            currentStudent.getStudent(int.Parse(ddlStudentName.SelectedValue.ToString()));
-
-            
-
-            BusinessLogic.AbuseReport abused = new BusinessLogic.AbuseReport(0, int.Parse(Session["userID"].ToString()), int.Parse(ddlStudentName.SelectedValue.ToString()), currentStudent.GuardianId, txtDescription.Text.ToString(), txtActionTaken.Text.ToString(), txtComment.Text, DateTime.Now);
-
-            string success = abused.InsertToDatabase();
-            
-            
-            if (success == "")
+            try
             {
-                success = "Abuse was succesfully logged";
-                MessageBox.Show(this.Page , success);
+                currentStudent.getStudent(int.Parse(ddlStudentName.SelectedValue.ToString()));
+                BusinessLogic.AbuseReport abused = new BusinessLogic.AbuseReport(0, int.Parse(Session["userID"].ToString()), int.Parse(ddlStudentName.SelectedValue.ToString()), currentStudent.GuardianId, txtDescription.Text.ToString(), txtActionTaken.Text.ToString(), txtComment.Text, DateTime.Now);
 
-                txtActionTaken.Text = "";
-                txtComment.Text = "";
-                txtDescription.Text = "";
+                string success = abused.InsertToDatabase();
+
+                if (success == "")
+                {
+                    success = "Abuse was succesfully logged";
+                    MessageBox.Show(this.Page, success);
+                    txtActionTaken.Text = "";
+                    txtComment.Text = "";
+                    txtDescription.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show(this.Page, "Failed to log Abuse");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(this.Page, "Failed to log Abuse");
+                MessageBox.Show(this, "Failed to get database information. Error :" + ex);
             }
-
-        }
-
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Index.aspx");
-        }
-
-        protected void ddlStudentName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

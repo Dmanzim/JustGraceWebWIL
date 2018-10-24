@@ -48,7 +48,7 @@ namespace WebApplication8.BusinessLogic
             try
             {
                 string sql = "Insert into tbl_student (fld_StudFName,FLD_STUDLNAME,FLD_PASSWORD,FLD_ACTIVE,FLD_GUARDIANID,FLD_EMAIL) " +
-                    "values ('" + this.FName + "','" + this.lName + "','" + this.password + "','" + this.isActive + "', '" + this.guardianId + ", '" + this.email + "'')";
+                    "values ('" + this.FName + "','" + this.lName + "','" + this.password + "','" + this.isActive + "', " + this.guardianId + ", '" + this.email + "')";
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();

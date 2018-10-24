@@ -14,7 +14,7 @@
    <div id="wrapper">
 
         
-                <div id="sidebar-wrapper">
+               <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -38,6 +38,9 @@
                 </li>
                 <li>
                    <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
+                </li>
+                <li>
+                   <a href="<%= Page.ResolveUrl("~//RegisterLesson.aspx") %>">Schedule Classes</a>
                 </li>
                 <li>
                    <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
@@ -113,7 +116,6 @@
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" Width="252px" />
                 <br />
                 <br />
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" Width="251px" />
                 <br />
             </div>
         </form>

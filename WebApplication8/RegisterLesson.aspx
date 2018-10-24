@@ -40,6 +40,9 @@
                    <a href="<%= Page.ResolveUrl("~//RegisterEmployee.aspx") %>">Employee Registration</a>
                 </li>
                 <li>
+                   <a href="<%= Page.ResolveUrl("~//RegisterLesson.aspx") %>">Schedule Classes</a>
+                </li>
+                <li>
                    <a href="<%= Page.ResolveUrl("~//StudentRegistration.aspx") %>">Student Registration</a>
                 </li>                
                 <li>
@@ -83,6 +86,9 @@
             <div>
             </div>
             <p>
+                <h2>Register New Lesson</h2>
+            </p>
+            <p>
                 Record Lesson Schedule:
             </p>
             <p>
@@ -104,7 +110,7 @@
                 Duration in hours:
             </p>
             <p>
-                <asp:TextBox ID="txtHours" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtHours" runat="server" TextMode="Number"></asp:TextBox>
             </p>
             <p>
                 Teacher:
@@ -115,7 +121,6 @@
             </p>
             <p>
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="Button1_Click" BackColor="#99CCFF" />
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="Button2_Click" BackColor="#99CCFF" />
             </p>
 
         </form>
